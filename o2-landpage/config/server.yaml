@@ -1,0 +1,22 @@
+# ============================================================
+#  O2 Data Solutions — Configuração do Servidor FastAPI
+# ============================================================
+server:
+  host: "0.0.0.0"
+  port: 80
+  reload: true
+  log_level: "info"
+  workers: 1
+
+database:
+  path: "data/o2_metrics.db"
+
+logs:
+  dir: "logs"
+  file: "logs/server.log"
+  max_bytes: 10485760   # 10 MB
+  backup_count: 5
+
+metrics:
+  flush_interval_seconds: 60
+  retention_days: 90

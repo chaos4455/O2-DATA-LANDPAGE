@@ -1,0 +1,45 @@
+# ============================================================
+#  O2 Data Solutions — Performance e Filas
+# ============================================================
+workers:
+  web: 2
+  background: 2
+  email_queue: 1
+
+queues:
+  email:
+    max_size: 500
+    retry_attempts: 3
+    retry_delay_seconds: 30
+  events:
+    max_size: 2000
+    flush_interval_seconds: 5
+  analytics:
+    max_size: 5000
+    flush_interval_seconds: 10
+
+cache:
+  enabled: true
+  ttl_seconds: 300
+  max_size_mb: 64
+  static_ttl_seconds: 3600
+
+hot_reload:
+  enabled: true
+  watch_extensions:
+    - ".html"
+    - ".css"
+    - ".js"
+    - ".yaml"
+    - ".yml"
+  ignore_patterns:
+    - "__pycache__"
+    - ".pyc"
+    - "*.db"
+    - "*.log"
+  debounce_ms: 200
+
+async:
+  max_concurrent_requests: 100
+  request_timeout_seconds: 30
+  db_pool_size: 10

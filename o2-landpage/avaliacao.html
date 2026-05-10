@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnóstico de Maturidade Analítica — O2 Data Solutions</title>
+  <meta name="description" content="Avalie em 15 minutos o nível de maturidade analítica da sua empresa e receba recomendações personalizadas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+          colors: {
+            brand: { 50:'#eff6ff', 100:'#dbeafe', 500:'#3b82f6', 600:'#2563eb', 700:'#1d4ed8' },
+            dark:  { bg:'#080c18', card:'#0d1526', border:'#1a2640' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="/assets/js/assessment-data.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      transition: background 0.3s, color 0.3s;
+      overflow-x: hidden;
+    }
+
+    /* ── Light theme ── */
+    body {
+      background: linear-gradient(160deg, #f0f4ff 0%, #f8faff 50%, #fafbff 100%);
+      color: #1e293b;
+    }
+    /* ── Dark theme ── */
+    .dark body {
+      background: linear-gradient(160deg, #060a18 0%, #080c1e 50%, #0a0f24 100%);
+      color: #e2e8f0;
+    }
+
+    /* ── Brand gradient ── */
+    .brand-gradient { background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); }
+    .text-gradient {
+      background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .dark .text-gradient {
+      background: linear-gradient(135deg, #60a5fa 0%, #c084fc 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ── Navbar ── */
+    .a-nav {
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .dark .a-nav {
+      background: rgba(6,9,20,0.88);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* ── Cards ── */
+    .a-card {
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(226,232,240,0.9);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 0 rgba(255,255,255,0.8) inset;
+    }
+    .dark .a-card {
+      background: rgba(13,21,38,0.88);
+      border: 1px solid rgba(255,255,255,0.07);
+      box-shadow: 0 4px 32px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.04) inset;
+    }
+
+    /* ── Inputs ── */
+    .a-input {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border-radius: 0.875rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.875rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      background: rgba(248,250,255,0.9);
+      border: 1.5px solid rgba(203,213,225,0.8);
+      color: #1e293b;
+    }
+    .a-input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+    }
+    .dark .a-input {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.1);
+      color: #e2e8f0;
+    }
+    .dark .a-input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.18);
+    }
+    .a-input::placeholder { color: #94a3b8; }
+    .dark .a-input::placeholder { color: rgba(255,255,255,0.3); }
+    select.a-input option { background: #fff; color: #1e293b; }
+    .dark select.a-input option { background: #0d1526; color: #e2e8f0; }
+    textarea.a-input { resize: vertical; min-height: 96px; }
+    .a-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #64748b;
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.01em;
+    }
+    .dark .a-label { color: #94a3b8; }
+    .form-group { margin-bottom: 1.125rem; }
+
+    /* ── Buttons ── */
+    .btn-p {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: white; font-weight: 700;
+      padding: 0.875rem 1.75rem;
+      border-radius: 0.875rem; border: none; cursor: pointer;
+      font-size: 0.9rem; font-family: 'Plus Jakarta Sans', sans-serif;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      transition: all 0.2s; white-space: nowrap;
+      box-shadow: 0 4px 16px rgba(37,99,235,0.25);
+    }
+    .btn-p:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(37,99,235,0.35); }
+    .btn-p:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .btn-s {
+      background: rgba(241,245,249,0.9);
+      color: #64748b; font-weight: 600;
+      padding: 0.875rem 1.5rem;
+      border-radius: 0.875rem;
+      border: 1.5px solid rgba(203,213,225,0.8);
+      cursor: pointer; font-size: 0.875rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      transition: all 0.2s;
+    }
+    .btn-s:hover { background: rgba(226,232,240,0.9); color: #334155; }
+    .dark .btn-s {
+      background: rgba(255,255,255,0.06);
+      color: #94a3b8;
+      border-color: rgba(255,255,255,0.08);
+    }
+    .dark .btn-s:hover { background: rgba(255,255,255,0.1); color: #e2e8f0; }
+
+    /* ── Slider ── */
+    input[type=range] {
+      -webkit-appearance: none; appearance: none;
+      width: 100%; height: 6px; border-radius: 9999px;
+      background: rgba(203,213,225,0.6); outline: none; cursor: pointer;
+    }
+    .dark input[type=range] { background: rgba(255,255,255,0.1); }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none; appearance: none;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      cursor: pointer;
+      box-shadow: 0 0 0 4px rgba(37,99,235,0.18);
+      transition: box-shadow 0.2s;
+    }
+    input[type=range]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 6px rgba(37,99,235,0.28); }
+    input[type=range]::-moz-range-thumb {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      cursor: pointer; border: none;
+    }
+
+    /* ── Area cards ── */
+    .area-card {
+      background: rgba(255,255,255,0.92);
+      border: 1.5px solid rgba(226,232,240,0.9);
+      border-radius: 1.25rem; padding: 1.25rem;
+      cursor: pointer; transition: all 0.25s cubic-bezier(.22,.68,0,1.2);
+    }
+    .dark .area-card {
+      background: rgba(13,21,38,0.85);
+      border-color: rgba(255,255,255,0.07);
+    }
+    .area-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(37,99,235,0.12); }
+    .dark .area-card:hover { box-shadow: 0 12px 32px rgba(37,99,235,0.22); }
+    .area-card.selected {
+      border-color: #3b82f6 !important;
+      background: rgba(239,246,255,0.95) !important;
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.15), 0 12px 32px rgba(37,99,235,0.12);
+    }
+    .dark .area-card.selected {
+      background: rgba(37,99,235,0.12) !important;
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.2), 0 12px 32px rgba(37,99,235,0.2);
+    }
+
+    /* ── Question card ── */
+    .q-card {
+      background: rgba(255,255,255,0.92);
+      border: 1.5px solid rgba(226,232,240,0.8);
+      border-radius: 1.25rem; padding: 1.5rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .dark .q-card {
+      background: rgba(13,21,38,0.85);
+      border-color: rgba(255,255,255,0.07);
+    }
+    .q-card:hover { border-color: rgba(59,130,246,0.3); box-shadow: 0 4px 16px rgba(37,99,235,0.08); }
+    .dark .q-card:hover { box-shadow: 0 4px 16px rgba(37,99,235,0.15); }
+
+    /* ── Step indicator ── */
+    .step-line { background: rgba(203,213,225,0.6); }
+    .dark .step-line { background: rgba(255,255,255,0.1); }
+
+    /* ── Score bar ── */
+    .score-bar { transition: width 0.9s cubic-bezier(0.4,0,0.2,1); }
+    .progress-fill { transition: width 0.4s ease; }
+
+    /* ── Animations ── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-in { animation: fadeInUp 0.4s ease forwards; }
+    .step-hidden { display: none !important; }
+
+    /* ── Blob ── */
+    .blob {
+      position: absolute; border-radius: 50%;
+      filter: blur(80px); pointer-events: none;
+    }
+
+    /* ── Score label ── */
+    .score-lbl { font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 9999px; }
+
+    /* ── Hint box ── */
+    .hint-box {
+      background: rgba(241,245,249,0.8);
+      border: 1px solid rgba(203,213,225,0.6);
+      border-radius: 0.75rem; padding: 0.625rem 0.875rem;
+      font-size: 0.75rem; color: #64748b; line-height: 1.5;
+    }
+    .dark .hint-box {
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.06);
+      color: #64748b;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .btn-p, .btn-s { padding: 0.75rem 1.25rem; font-size: 0.85rem; }
+      .a-card { padding: 1.25rem !important; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Anti-flash theme -->
+  <script>
+    (function(){
+      function gc(n){var m=document.cookie.match('(^| )'+n+'=([^;]+)');return m?m[2]:null;}
+      var t=gc('o2_theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+      if(t==='dark')document.documentElement.classList.replace('light','dark');
+    })();
+  </script>
+
+  <!-- Blobs -->
+  <div class="blob w-[500px] h-[500px] top-0 -left-32 opacity-[0.08] dark:opacity-[0.14]" style="background:radial-gradient(circle,#3b82f6,transparent 70%)"></div>
+  <div class="blob w-[400px] h-[400px] top-40 -right-24 opacity-[0.06] dark:opacity-[0.10]" style="background:radial-gradient(circle,#8b5cf6,transparent 70%)"></div>
+  <div class="blob w-[350px] h-[350px] bottom-0 left-1/3 opacity-[0.05] dark:opacity-[0.08]" style="background:radial-gradient(circle,#06b6d4,transparent 70%)"></div>
+
+  <!-- NAVBAR -->
+  <nav class="a-nav fixed w-full z-50 transition-all duration-300">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-[68px] flex items-center justify-between gap-3">
+      <a href="/" class="flex items-center gap-2.5 group flex-shrink-0">
+        <div class="w-9 h-9 rounded-xl brand-gradient flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
+          <i class="fa-solid fa-circle-nodes text-sm"></i>
+        </div>
+        <div class="leading-none">
+          <span class="font-extrabold text-[1.05rem] tracking-tight text-slate-900 dark:text-white">O2 Data<span class="text-blue-500">.</span></span>
+          <span class="block text-[8px] font-semibold text-slate-400 tracking-widest uppercase">Solutions</span>
+        </div>
+      </a>
+
+      <div class="flex items-center gap-2 flex-1 justify-center">
+        <div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/40 text-blue-600 dark:text-blue-400 text-xs font-bold">
+          <i class="fa-solid fa-clipboard-check text-[10px]"></i>
+          <span class="hidden md:inline">Diagnóstico de Maturidade Analítica</span>
+          <span class="md:hidden">Diagnóstico</span>
+        </div>
+        <span class="px-2.5 py-1 rounded-full bg-green-50 dark:bg-green-900/20 border border-green-100 dark:border-green-800/40 text-green-600 dark:text-green-400 text-xs font-bold whitespace-nowrap">Grátis · 15 min</span>
+      </div>
+
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <button onclick="toggleTheme()" aria-label="Alternar tema"
+          class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:text-blue-500 transition-colors">
+          <i id="a-theme-icon" class="fa-solid fa-moon text-xs"></i>
+        </button>
+        <a href="/" class="hidden sm:flex items-center gap-1.5 text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-xs font-semibold">
+          <i class="fa-solid fa-arrow-left text-[10px]"></i>Voltar
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="pt-20 pb-16 relative z-10">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+
+      <!-- STEP INDICATOR -->
+      <div class="flex items-center justify-center gap-1.5 sm:gap-3 pt-8 pb-7">
+        <div class="flex items-center gap-1.5">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 step-circle-1 brand-gradient text-white shadow-md shadow-blue-500/20">1</div>
+          <span class="text-xs font-semibold hidden sm:block step-label-1 text-slate-700 dark:text-white">Perfil</span>
+        </div>
+        <div class="w-6 sm:w-10 h-px step-line flex-shrink-0"></div>
+        <div class="flex items-center gap-1.5">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 step-circle-2 bg-slate-200 dark:bg-slate-800 text-slate-400 dark:text-slate-500">2</div>
+          <span class="text-xs font-semibold hidden sm:block step-label-2 text-slate-400 dark:text-slate-500">Área</span>
+        </div>
+        <div class="w-6 sm:w-10 h-px step-line flex-shrink-0"></div>
+        <div class="flex items-center gap-1.5">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 step-circle-3 bg-slate-200 dark:bg-slate-800 text-slate-400 dark:text-slate-500">3</div>
+          <span class="text-xs font-semibold hidden sm:block step-label-3 text-slate-400 dark:text-slate-500">Questionário</span>
+        </div>
+        <div class="w-6 sm:w-10 h-px step-line flex-shrink-0"></div>
+        <div class="flex items-center gap-1.5">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 step-circle-4 bg-slate-200 dark:bg-slate-800 text-slate-400 dark:text-slate-500">4</div>
+          <span class="text-xs font-semibold hidden sm:block step-label-4 text-slate-400 dark:text-slate-500">Resultado</span>
+        </div>
+      </div>
+
+      <!-- STEP 1: PERFIL -->
+      <div id="step-1" class="animate-in">
+        <div class="text-center mb-8">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/40 text-blue-600 dark:text-blue-400 text-xs font-bold mb-5">
+            <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+            Passo 1 de 4 — Perfil da Empresa
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-3 leading-tight">
+            Diagnóstico de <span class="text-gradient">Maturidade Analítica</span>
+          </h1>
+          <p class="text-slate-500 dark:text-slate-400 text-base max-w-xl mx-auto leading-relaxed">
+            Responda algumas perguntas sobre sua empresa para personalizarmos o diagnóstico e as recomendações.
+          </p>
+        </div>
+
+        <div class="a-card rounded-3xl p-6 sm:p-8">
+          <form id="profile-form" novalidate>
+            <div class="grid sm:grid-cols-2 gap-x-5">
+              <div class="form-group">
+                <label class="a-label" for="f-name"><i class="fa-solid fa-user mr-1.5 text-blue-500"></i>Nome completo *</label>
+                <input class="a-input" type="text" id="f-name" name="name" placeholder="Seu nome completo" required>
+              </div>
+              <div class="form-group">
+                <label class="a-label" for="f-email"><i class="fa-solid fa-envelope mr-1.5 text-blue-500"></i>E-mail corporativo *</label>
+                <input class="a-input" type="email" id="f-email" name="email" placeholder="voce@empresa.com.br" required>
+              </div>
+              <div class="form-group">
+                <label class="a-label" for="f-company"><i class="fa-solid fa-building mr-1.5 text-purple-500"></i>Empresa *</label>
+                <input class="a-input" type="text" id="f-company" name="company" placeholder="Nome da empresa" required>
+              </div>
+              <div class="form-group">
+                <label class="a-label" for="f-role"><i class="fa-solid fa-id-badge mr-1.5 text-purple-500"></i>Cargo</label>
+                <input class="a-input" type="text" id="f-role" name="role" placeholder="Ex: Diretor de Operações">
+              </div>
+              <div class="form-group">
+                <label class="a-label" for="f-sector"><i class="fa-solid fa-industry mr-1.5 text-cyan-500"></i>Setor *</label>
+                <select class="a-input" id="f-sector" name="sector" required>
+                  <option value="">Selecione o setor</option>
+                  <option>Varejo &amp; E-commerce</option>
+                  <option>Indústria &amp; Manufatura</option>
+                  <option>Agronegócio</option>
+                  <option>Financeiro &amp; Seguros</option>
+                  <option>Saúde &amp; Farmácia</option>
+                  <option>Logística &amp; Transporte</option>
+                  <option>Tecnologia &amp; SaaS</option>
+                  <option>Serviços B2B</option>
+                  <option>Construção &amp; Imobiliário</option>
+                  <option>Educação</option>
+                  <option>Outro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="a-label" for="f-employees"><i class="fa-solid fa-users mr-1.5 text-cyan-500"></i>Número de funcionários *</label>
+                <select class="a-input" id="f-employees" name="employees" required>
+                  <option value="">Selecione</option>
+                  <option>1-10</option><option>11-50</option><option>51-200</option>
+                  <option>201-500</option><option>500+</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="a-label" for="f-revenue"><i class="fa-solid fa-chart-bar mr-1.5 text-green-500"></i>Faturamento anual *</label>
+                <select class="a-input" id="f-revenue" name="revenue" required>
+                  <option value="">Selecione</option>
+                  <option>Menos de R$ 1M</option><option>R$ 1M – R$ 5M</option>
+                  <option>R$ 5M – R$ 20M</option><option>R$ 20M – R$ 100M</option>
+                  <option>Acima de R$ 100M</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="a-label" for="f-urgency"><i class="fa-solid fa-clock mr-1.5 text-yellow-500"></i>Urgência para implementação</label>
+                <select class="a-input" id="f-urgency" name="urgency">
+                  <option value="">Selecione</option>
+                  <option value="imediata">Imediata (problema crítico agora)</option>
+                  <option value="3meses">Curto prazo (próximos 3 meses)</option>
+                  <option value="6meses">Médio prazo (próximos 6 meses)</option>
+                  <option value="1ano">Planejamento (próximo ano)</option>
+                </select>
+              </div>
+              <div class="form-group sm:col-span-2">
+                <label class="a-label" for="f-budget"><i class="fa-solid fa-wallet mr-1.5 text-orange-500"></i>Orçamento disponível para projetos de dados</label>
+                <select class="a-input" id="f-budget" name="budget">
+                  <option value="">Selecione (opcional)</option>
+                  <option>Menos de R$ 50k</option><option>R$ 50k – R$ 150k</option>
+                  <option>R$ 150k – R$ 500k</option><option>Acima de R$ 500k</option>
+                </select>
+              </div>
+              <div class="form-group sm:col-span-2">
+                <label class="a-label" for="f-challenge"><i class="fa-solid fa-lightbulb mr-1.5 text-yellow-500"></i>Descreva seu principal desafio analítico</label>
+                <textarea class="a-input" id="f-challenge" name="main_challenge" placeholder="Ex: Não conseguimos prever a demanda com precisão, perdemos vendas por ruptura de estoque..."></textarea>
+              </div>
+            </div>
+            <div id="profile-error" class="hidden mb-4 p-3 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/40 text-red-600 dark:text-red-400 text-sm font-medium">
+              <i class="fa-solid fa-circle-exclamation mr-2"></i><span></span>
+            </div>
+            <div class="flex justify-end pt-2">
+              <button type="button" onclick="goToStep2()" class="btn-p">
+                Próximo: Escolher Área <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- STEP 2: ÁREA -->
+      <div id="step-2" class="step-hidden animate-in">
+        <div class="text-center mb-8">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 dark:bg-purple-900/20 border border-purple-100 dark:border-purple-800/40 text-purple-600 dark:text-purple-400 text-xs font-bold mb-5">
+            <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+            Passo 2 de 4 — Escolha a Área
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3 leading-tight">
+            Qual área você quer <span class="text-gradient">avaliar hoje?</span>
+          </h2>
+          <p class="text-slate-500 dark:text-slate-400 text-sm max-w-xl mx-auto leading-relaxed">
+            Selecione a área mais crítica para o seu negócio. Você pode repetir o diagnóstico para outras áreas depois.
+          </p>
+        </div>
+        <div id="areas-grid" class="grid sm:grid-cols-2 gap-4 mb-6"></div>
+        <div id="area-error" class="hidden mb-4 p-3 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/40 text-red-600 dark:text-red-400 text-sm font-medium">
+          <i class="fa-solid fa-circle-exclamation mr-2"></i>Selecione uma área para continuar.
+        </div>
+        <div class="flex justify-between gap-3">
+          <button onclick="goToStep(1)" class="btn-s"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+          <button onclick="goToStep3()" class="btn-p">Iniciar Questionário <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- STEP 3: QUESTIONÁRIO -->
+      <div id="step-3" class="step-hidden animate-in">
+        <div class="mb-6">
+          <div class="flex items-center justify-between mb-2.5">
+            <div class="flex items-center gap-2.5">
+              <div id="q-area-icon" class="w-9 h-9 rounded-xl brand-gradient flex items-center justify-center text-white text-sm shadow-md shadow-blue-500/20"></div>
+              <div>
+                <span id="q-area-title" class="font-bold text-slate-900 dark:text-white text-sm block"></span>
+                <span class="text-xs text-slate-400">Avaliação de maturidade</span>
+              </div>
+            </div>
+            <span id="q-progress-text" class="text-xs font-bold text-slate-400 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-full"></span>
+          </div>
+          <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div id="q-progress-bar" class="h-full brand-gradient progress-fill rounded-full" style="width:0%"></div>
+          </div>
+        </div>
+        <div id="questions-container" class="space-y-4 mb-6"></div>
+        <div class="flex justify-between gap-3">
+          <button onclick="goToStep(2)" class="btn-s"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+          <button onclick="calculateResult()" class="btn-p"><i class="fa-solid fa-chart-bar"></i> Ver Resultado</button>
+        </div>
+      </div>
+
+      <!-- STEP 4: RESULTADO -->
+      <div id="step-4" class="step-hidden animate-in">
+        <div class="text-center mb-8">
+          <div id="result-badge" class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-5 border"></div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-2 leading-tight">
+            Diagnóstico: <span id="result-area-name" class="text-gradient"></span>
+          </h2>
+          <p id="result-message" class="text-slate-500 dark:text-slate-400 text-sm max-w-xl mx-auto leading-relaxed"></p>
+        </div>
+
+        <!-- Score card -->
+        <div class="a-card rounded-3xl p-6 sm:p-8 mb-5">
+          <div class="flex flex-col sm:flex-row items-center gap-6 mb-8">
+            <!-- Circle -->
+            <div class="flex-shrink-0 relative">
+              <svg width="136" height="136" viewBox="0 0 136 136">
+                <circle cx="68" cy="68" r="56" fill="none" stroke="rgba(203,213,225,0.4)" stroke-width="10"/>
+                <circle id="score-circle" cx="68" cy="68" r="56" fill="none" stroke="url(#sg)" stroke-width="10"
+                  stroke-linecap="round" stroke-dasharray="351.9" stroke-dashoffset="351.9"
+                  transform="rotate(-90 68 68)" style="transition:stroke-dashoffset 1.2s cubic-bezier(0.4,0,0.2,1)"/>
+                <defs><linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#7c3aed"/>
+                </linearGradient></defs>
+              </svg>
+              <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <span id="score-number" class="text-4xl font-black text-slate-900 dark:text-white"></span>
+                <span class="text-xs text-slate-400 font-semibold">de 10</span>
+              </div>
+            </div>
+            <!-- Details -->
+            <div class="flex-1 text-center sm:text-left">
+              <div id="result-level-label" class="text-2xl font-extrabold mb-1.5"></div>
+              <div id="result-level-desc" class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4"></div>
+              <div class="flex flex-wrap gap-2.5 justify-center sm:justify-start">
+                <div class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50 text-xs font-semibold text-slate-600 dark:text-slate-300">
+                  <i class="fa-solid fa-list-check mr-1.5 text-blue-500"></i>
+                  <span id="result-questions-count"></span> perguntas
+                </div>
+                <div class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50 text-xs font-semibold text-slate-600 dark:text-slate-300">
+                  <i class="fa-solid fa-percent mr-1.5 text-purple-500"></i>
+                  <span id="result-percentage"></span>% maturidade
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Score bars -->
+          <div class="mb-6">
+            <h3 class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-chart-bar text-blue-500"></i>Pontuação por Questão
+            </h3>
+            <div id="score-bars" class="space-y-2.5"></div>
+          </div>
+
+          <!-- Recommendations -->
+          <div id="recommendations" class="rounded-2xl p-5 border">
+            <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+              <i class="fa-solid fa-lightbulb text-yellow-500"></i>Recomendações Prioritárias
+            </h3>
+            <ul id="rec-list" class="space-y-2.5"></ul>
+          </div>
+        </div>
+
+        <!-- CTA card -->
+        <div class="a-card rounded-3xl p-6 sm:p-8 text-center" style="border-color:rgba(59,130,246,0.2)">
+          <div class="w-14 h-14 brand-gradient rounded-2xl flex items-center justify-center text-white text-xl mx-auto mb-4 shadow-lg shadow-blue-500/20">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <h3 class="text-xl font-extrabold text-slate-900 dark:text-white mb-2">Quer uma reunião de diagnóstico completa e personalizada?</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 max-w-md mx-auto leading-relaxed">
+            Nossa equipe analisa os resultados em profundidade e entrega um roadmap com as iniciativas de maior impacto para o seu negócio.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="https://wa.me/5511913353137?text=Ol%C3%A1%21+Fiz+o+diagn%C3%B3stico+de+maturidade+anal%C3%ADtica+e+gostaria+de+agendar+uma+conversa."
+               target="_blank" rel="noopener" class="btn-p justify-center">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Agendar Reunião de Diagnóstico
+            </a>
+            <button onclick="restartAssessment()" class="btn-s justify-center">
+              <i class="fa-solid fa-rotate-right"></i> Avaliar Outra Área
+            </button>
+          </div>
+        </div>
+
+        <div id="submit-status" class="hidden mt-4 p-3 rounded-xl text-sm font-medium text-center"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 dark:border-slate-800/60 py-6 relative z-10">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <div class="w-7 h-7 rounded-lg brand-gradient flex items-center justify-center text-white text-xs shadow-sm">
+          <i class="fa-solid fa-circle-nodes"></i>
+        </div>
+        <span class="text-sm font-bold text-slate-500 dark:text-slate-400">O2 Data Solutions</span>
+      </div>
+      <p class="text-xs text-slate-400 dark:text-slate-600">© 2025 O2 Data Solutions · Maringá, PR · contato@o2data.com.br</p>
+      <a href="/" class="text-xs text-slate-400 hover:text-blue-500 transition-colors font-semibold flex items-center gap-1">
+        <i class="fa-solid fa-arrow-left text-[10px]"></i>Voltar ao site
+      </a>
+    </div>
+  </footer>
+
+  <script>
+  // ── Theme ──────────────────────────────────────────────────────────────────
+  function setCookie(n,v,d){var e=new Date();e.setTime(e.getTime()+d*864e5);document.cookie=n+'='+v+';expires='+e.toUTCString()+';path=/;SameSite=Lax';}
+  function getCookie(n){var m=document.cookie.match('(^| )'+n+'=([^;]+)');return m?m[2]:null;}
+  function applyTheme(t){
+    var html=document.documentElement,icon=document.getElementById('a-theme-icon');
+    if(t==='dark'){html.classList.add('dark');if(icon){icon.classList.remove('fa-moon');icon.classList.add('fa-sun');}}
+    else{html.classList.remove('dark');if(icon){icon.classList.remove('fa-sun');icon.classList.add('fa-moon');}}
+  }
+  function toggleTheme(){
+    var next=document.documentElement.classList.contains('dark')?'light':'dark';
+    applyTheme(next);setCookie('o2_theme',next,365);
+  }
+  (function(){var s=getCookie('o2_theme')||( window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');applyTheme(s);})();
+
+  // ── State ──────────────────────────────────────────────────────────────────
+  var state={currentStep:1,profile:{},selectedAreaId:null,scores:{},totalScore:0,maxScore:0,percentage:0};
+
+  function getArea(id){return window.O2_ASSESSMENT.areas.find(function(a){return a.id===id;});}
+  function getScoreRange(s){
+    var r=window.O2_ASSESSMENT.scoreRanges;
+    if(s<=3.9)return Object.assign({key:'critico'},r.critico);
+    if(s<=6.9)return Object.assign({key:'desenvolvimento'},r.desenvolvimento);
+    return Object.assign({key:'avancado'},r.avancado);
+  }
+
+  // ── Step indicator ─────────────────────────────────────────────────────────
+  function updateStepIndicator(step){
+    for(var i=1;i<=4;i++){
+      var c=document.querySelector('.step-circle-'+i),l=document.querySelector('.step-label-'+i);
+      if(!c)continue;
+      c.className=c.className.replace(/brand-gradient|text-white|bg-slate-200|dark:bg-slate-800|text-slate-400|dark:text-slate-500|shadow-md|shadow-blue-500\/20/g,'').trim();
+      if(i<step){
+        c.classList.add('brand-gradient','text-white','shadow-md');
+        c.innerHTML='<i class="fa-solid fa-check text-xs"></i>';
+        if(l){l.className=l.className.replace(/text-slate-400|dark:text-slate-500/g,'').trim();l.classList.add('text-slate-700','dark:text-white');}
+      }else if(i===step){
+        c.classList.add('brand-gradient','text-white','shadow-md');
+        c.innerHTML=i;
+        if(l){l.className=l.className.replace(/text-slate-400|dark:text-slate-500/g,'').trim();l.classList.add('text-slate-700','dark:text-white');}
+      }else{
+        c.classList.add('bg-slate-200','dark:bg-slate-800','text-slate-400','dark:text-slate-500');
+        c.innerHTML=i;
+        if(l){l.className=l.className.replace(/text-slate-700|dark:text-white/g,'').trim();l.classList.add('text-slate-400','dark:text-slate-500');}
+      }
+    }
+  }
+
+  function goToStep(n){
+    document.getElementById('step-'+state.currentStep).classList.add('step-hidden');
+    state.currentStep=n;
+    var el=document.getElementById('step-'+n);
+    el.classList.remove('step-hidden');
+    el.classList.add('animate-in');
+    updateStepIndicator(n);
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  // ── Step 1 → 2 ─────────────────────────────────────────────────────────────
+  function goToStep2(){
+    var errEl=document.getElementById('profile-error'),missing=[];
+    ['f-name','f-email','f-company','f-sector','f-employees','f-revenue'].forEach(function(id){
+      var el=document.getElementById(id);
+      if(!el.value.trim())missing.push(el.previousElementSibling.textContent.replace('*','').trim());
+    });
+    var em=document.getElementById('f-email');
+    if(em.value&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value))missing.push('E-mail válido');
+    if(missing.length){errEl.classList.remove('hidden');errEl.querySelector('span').textContent='Preencha: '+missing.join(', ');return;}
+    errEl.classList.add('hidden');
+    state.profile={
+      name:document.getElementById('f-name').value.trim(),
+      email:document.getElementById('f-email').value.trim(),
+      company:document.getElementById('f-company').value.trim(),
+      role:document.getElementById('f-role').value.trim(),
+      sector:document.getElementById('f-sector').value,
+      employees:document.getElementById('f-employees').value,
+      revenue:document.getElementById('f-revenue').value,
+      urgency:document.getElementById('f-urgency').value,
+      budget:document.getElementById('f-budget').value,
+      main_challenge:document.getElementById('f-challenge').value.trim()
+    };
+    renderAreasGrid();goToStep(2);
+  }
+
+  // ── Color map ──────────────────────────────────────────────────────────────
+  var CM={
+    blue:  {bg:'rgba(239,246,255,0.9)',dbg:'rgba(37,99,235,0.1)',border:'rgba(59,130,246,0.3)',text:'#2563eb',dtext:'#60a5fa',icon:'rgba(219,234,254,0.9)',dicon:'rgba(37,99,235,0.18)'},
+    purple:{bg:'rgba(245,243,255,0.9)',dbg:'rgba(124,58,237,0.1)',border:'rgba(139,92,246,0.3)',text:'#7c3aed',dtext:'#a78bfa',icon:'rgba(237,233,254,0.9)',dicon:'rgba(124,58,237,0.18)'},
+    red:   {bg:'rgba(255,241,242,0.9)',dbg:'rgba(220,38,38,0.1)',border:'rgba(239,68,68,0.3)',text:'#dc2626',dtext:'#f87171',icon:'rgba(254,226,226,0.9)',dicon:'rgba(220,38,38,0.18)'},
+    indigo:{bg:'rgba(238,242,255,0.9)',dbg:'rgba(99,102,241,0.1)',border:'rgba(99,102,241,0.3)',text:'#4f46e5',dtext:'#a5b4fc',icon:'rgba(224,231,255,0.9)',dicon:'rgba(99,102,241,0.18)'},
+    green: {bg:'rgba(240,253,244,0.9)',dbg:'rgba(22,163,74,0.1)',border:'rgba(34,197,94,0.3)',text:'#16a34a',dtext:'#4ade80',icon:'rgba(220,252,231,0.9)',dicon:'rgba(22,163,74,0.18)'},
+    cyan:  {bg:'rgba(236,254,255,0.9)',dbg:'rgba(6,182,212,0.1)',border:'rgba(6,182,212,0.3)',text:'#0891b2',dtext:'#22d3ee',icon:'rgba(207,250,254,0.9)',dicon:'rgba(6,182,212,0.18)'}
+  };
+  function c(area){return CM[area.color]||CM.blue;}
+  function isDark(){return document.documentElement.classList.contains('dark');}
+
+  // ── Render areas ───────────────────────────────────────────────────────────
+  function renderAreasGrid(){
+    var g=document.getElementById('areas-grid');g.innerHTML='';
+    window.O2_ASSESSMENT.areas.forEach(function(area){
+      var col=c(area),dark=isDark();
+      var card=document.createElement('div');
+      card.className='area-card';
+      card.dataset.areaId=area.id;
+      if(state.selectedAreaId===area.id)card.classList.add('selected');
+      card.innerHTML='<div class="flex items-start gap-3.5">'+
+        '<div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 text-lg" style="background:'+(dark?col.dicon:col.icon)+';color:'+(dark?col.dtext:col.text)+'">'+
+          '<i class="'+area.icon+'"></i></div>'+
+        '<div class="flex-1 min-w-0">'+
+          '<div class="font-bold text-slate-900 dark:text-white text-sm mb-1 leading-snug">'+area.title+'</div>'+
+          '<div class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed mb-3">'+area.description+'</div>'+
+          '<div class="flex items-center justify-between">'+
+            '<span class="text-xs font-semibold" style="color:'+(dark?col.dtext:col.text)+'">'+area.questions.length+' perguntas</span>'+
+            '<span class="text-xs font-bold px-2.5 py-1 rounded-full border" style="color:'+(dark?col.dtext:col.text)+';border-color:'+(dark?col.dicon:col.border)+';background:'+(dark?col.dbg:col.bg)+'">'+
+              'Selecionar <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i></span>'+
+          '</div>'+
+        '</div></div>';
+      card.addEventListener('click',function(){selectArea(area.id);});
+      g.appendChild(card);
+    });
+  }
+
+  function selectArea(id){
+    state.selectedAreaId=id;
+    document.querySelectorAll('.area-card').forEach(function(c){
+      c.classList.remove('selected');
+      if(c.dataset.areaId===id)c.classList.add('selected');
+    });
+    document.getElementById('area-error').classList.add('hidden');
+  }
+
+  // ── Step 2 → 3 ─────────────────────────────────────────────────────────────
+  function goToStep3(){
+    if(!state.selectedAreaId){document.getElementById('area-error').classList.remove('hidden');return;}
+    renderQuestions();goToStep(3);
+  }
+
+  // ── Render questions ───────────────────────────────────────────────────────
+  function renderQuestions(){
+    var area=getArea(state.selectedAreaId),col=c(area),dark=isDark();
+    var iconEl=document.getElementById('q-area-icon');
+    iconEl.innerHTML='<i class="'+area.icon+' text-xs"></i>';
+    document.getElementById('q-area-title').textContent=area.title;
+    var container=document.getElementById('questions-container');container.innerHTML='';
+    area.questions.forEach(function(q,idx){
+      var sv=state.scores[q.id]!==undefined?state.scores[q.id]:5;
+      var card=document.createElement('div');
+      card.className='q-card';
+      var pct=sv*10;
+      card.innerHTML=
+        '<div class="flex items-start gap-3 mb-4">'+
+          '<span class="flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold" style="background:'+(dark?col.dicon:col.icon)+';color:'+(dark?col.dtext:col.text)+'">'+(idx+1)+'</span>'+
+          '<p class="text-sm font-semibold text-slate-800 dark:text-white leading-relaxed">'+q.text+'</p>'+
+        '</div>'+
+        '<div class="mb-3">'+
+          '<input type="range" min="0" max="10" step="1" value="'+sv+'" id="sl-'+q.id+'" data-qid="'+q.id+'"'+
+            ' oninput="updateSlider(\'' + q.id + '\',this.value)"'+
+            ' style="background:linear-gradient(to right,'+(dark?'#3b82f6':'#2563eb')+' '+pct+'%,rgba(203,213,225,0.5) '+pct+'%)">'+
+        '</div>'+
+        '<div class="flex items-center justify-between mb-3">'+
+          '<div class="flex gap-2 text-[10px] text-slate-400 font-medium flex-wrap">'+
+            '<span>0 — Não temos</span><span class="text-slate-300 dark:text-slate-600">·</span>'+
+            '<span>5 — Em desenvolvimento</span><span class="text-slate-300 dark:text-slate-600">·</span>'+
+            '<span>10 — Excelente</span>'+
+          '</div>'+
+          '<div id="sb-'+q.id+'" class="score-lbl" style="background:'+(dark?col.dicon:col.icon)+';color:'+(dark?col.dtext:col.text)+'">'+sv+'</div>'+
+        '</div>'+
+        '<div class="hint-box"><i class="fa-solid fa-circle-info mr-1.5 text-slate-400"></i>'+q.hint+'</div>';
+      container.appendChild(card);
+      state.scores[q.id]=sv;
+    });
+    updateProgress();
+  }
+
+  function updateSlider(qid,val){
+    var v=parseInt(val);state.scores[qid]=v;
+    var badge=document.getElementById('sb-'+qid);if(badge)badge.textContent=v;
+    var sl=document.getElementById('sl-'+qid);
+    if(sl){var dark=isDark();sl.style.background='linear-gradient(to right,'+(dark?'#3b82f6':'#2563eb')+' '+(v*10)+'%,rgba(203,213,225,0.5) '+(v*10)+'%)';}
+    updateProgress();
+  }
+
+  function updateProgress(){
+    var area=getArea(state.selectedAreaId);if(!area)return;
+    var ans=area.questions.filter(function(q){return state.scores[q.id]!==undefined;}).length;
+    var pct=Math.round((ans/area.questions.length)*100);
+    document.getElementById('q-progress-bar').style.width=pct+'%';
+    document.getElementById('q-progress-text').textContent=ans+'/'+area.questions.length+' respondidas';
+  }
+
+  // ── Calculate result ───────────────────────────────────────────────────────
+  function calculateResult(){
+    var area=getArea(state.selectedAreaId);
+    var scores=area.questions.map(function(q){return state.scores[q.id]!==undefined?state.scores[q.id]:5;});
+    var total=scores.reduce(function(a,b){return a+b;},0);
+    var avg=total/area.questions.length;
+    var pct=Math.round((total/(area.questions.length*10))*100);
+    state.totalScore=avg;state.maxScore=area.questions.length*10;state.percentage=pct;
+    renderResult(area,scores,avg,pct);
+    goToStep(4);
+    submitAssessment(area,avg,pct);
+  }
+
+  // ── Render result ──────────────────────────────────────────────────────────
+  function renderResult(area,scores,avg,pct){
+    var range=getScoreRange(avg),col=c(area),dark=isDark();
+    var avgR=Math.round(avg*10)/10;
+    var badge=document.getElementById('result-badge');
+    badge.style.background=range.bg;badge.style.borderColor=range.color+'40';badge.style.color=range.color;
+    badge.innerHTML='<i class="'+range.icon+'"></i> '+range.label;
+    document.getElementById('result-area-name').textContent=area.title;
+    document.getElementById('result-message').textContent=range.message;
+    document.getElementById('result-level-label').textContent=range.label;
+    document.getElementById('result-level-label').style.color=range.color;
+    document.getElementById('result-level-desc').textContent=getLevelDesc(range.key,area.title);
+    document.getElementById('result-questions-count').textContent=area.questions.length;
+    document.getElementById('result-percentage').textContent=pct;
+    document.getElementById('score-number').textContent=avgR.toFixed(1);
+    setTimeout(function(){
+      var circle=document.getElementById('score-circle');
+      circle.style.strokeDashoffset=351.9-(avg/10)*351.9;
+    },200);
+    // Bars
+    var bars=document.getElementById('score-bars');bars.innerHTML='';
+    area.questions.forEach(function(q,i){
+      var s=scores[i],bc=s<=3?'#ef4444':s<=6?'#f59e0b':'#22c55e';
+      var short=q.text.length>65?q.text.substring(0,65)+'…':q.text;
+      bars.innerHTML+='<div>'+
+        '<div class="flex items-center justify-between mb-1">'+
+          '<span class="text-xs text-slate-500 dark:text-slate-400 truncate flex-1 mr-3">'+short+'</span>'+
+          '<span class="text-xs font-bold flex-shrink-0" style="color:'+bc+'">'+s+'/10</span>'+
+        '</div>'+
+        '<div class="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">'+
+          '<div class="h-full rounded-full score-bar" style="width:0%;background:'+bc+'" data-w="'+(s*10)+'%"></div>'+
+        '</div></div>';
+    });
+    setTimeout(function(){document.querySelectorAll('.score-bar').forEach(function(b){b.style.width=b.dataset.w;});},300);
+    // Recommendations
+    var rec=document.getElementById('recommendations');
+    rec.style.background=dark?range.bg.replace('0.1','0.08'):range.bg;
+    rec.style.borderColor=range.color+'25';
+    var rl=document.getElementById('rec-list');rl.innerHTML='';
+    getRecommendations(range.key,area.id).forEach(function(r){
+      rl.innerHTML+='<li class="flex items-start gap-2.5 text-sm text-slate-700 dark:text-slate-300">'+
+        '<i class="fa-solid fa-circle-check mt-0.5 flex-shrink-0" style="color:'+range.color+'"></i>'+
+        '<span>'+r+'</span></li>';
+    });
+  }
+
+  function getLevelDesc(key,t){
+    var d={
+      critico:'Em '+t+', sua empresa ainda depende fortemente de processos manuais e decisões baseadas em intuição. Há oportunidades imediatas de melhoria com alto impacto.',
+      desenvolvimento:'Em '+t+', você já iniciou a jornada analítica com algumas ferramentas e processos. O próximo passo é consolidar e automatizar o que já funciona.',
+      avancado:'Em '+t+', sua empresa demonstra maturidade analítica elevada. O foco agora é otimizar, escalar e explorar tecnologias emergentes como IA generativa.'
+    };return d[key]||'';
+  }
+
+  function getRecommendations(level,areaId){
+    var r={
+      critico:{
+        supply_chain:['Implemente controle de estoque com alertas de ruptura','Crie previsão de demanda baseada em histórico dos últimos 12 meses','Estabeleça KPIs básicos: giro, cobertura e taxa de ruptura','Automatize cotação com pelo menos 3 fornecedores por item crítico','Defina política de estoque de segurança para os 20% de itens mais críticos'],
+        comercial:['Implemente um CRM básico para registrar todas as oportunidades','Calcule CAC e LTV médio da base atual','Crie dashboard com funil e taxa de conversão por etapa','Defina processo de qualificação de leads com critérios objetivos','Estabeleça régua de follow-up automatizada para leads não convertidos'],
+        credito_risco:['Implemente política de crédito formal com critérios documentados','Consulte bureaus para todos os novos clientes acima de um limite','Crie régua de cobrança básica com comunicações automáticas','Calcule inadimplência por faixa de atraso e defina metas','Estabeleça limites de crédito por perfil com revisão semestral'],
+        dados_ml:['Faça inventário de todas as fontes de dados da empresa','Implemente processo básico de qualidade para fontes críticas','Centralize dados em um data warehouse simples','Defina glossário de métricas para garantir consistência','Treine a equipe em análise básica com ferramentas acessíveis'],
+        automacao:['Mapeie os 5 processos mais repetitivos e calcule tempo gasto','Automatize geração e envio dos relatórios mais acessados','Implemente alertas básicos por e-mail para KPIs críticos','Crie integrações simples entre os sistemas mais usados','Estabeleça processo de identificação de automações por ROI'],
+        dashboards:['Crie dashboard executivo com os 5-10 KPIs mais importantes','Defina processo de atualização diária dos dados principais','Estabeleça reuniões semanais de revisão de métricas','Padronize definições de métricas entre todas as áreas','Treine gestores no uso básico de ferramentas de BI']
+      },
+      desenvolvimento:{
+        supply_chain:['Implemente modelos de previsão com decomposição de sazonalidade','Automatize reposição com ponto de pedido dinâmico','Integre dados de fornecedores via API para visibilidade em tempo real','Implemente análise ABC-XYZ para otimizar políticas por categoria','Desenvolva scorecard de fornecedores com KPIs automatizados'],
+        comercial:['Implemente lead scoring automático baseado em comportamento','Desenvolva modelos de propensão de churn e cross-sell','Crie análise de cohort para entender retenção e LTV por segmento','Automatize nutrição de leads com sequências personalizadas','Implemente atribuição multi-touch para medir ROI por canal'],
+        credito_risco:['Desenvolva scorecard de crédito com variáveis comportamentais','Implemente modelo preditivo de inadimplência para intervenção proativa','Automatize régua de cobrança com personalização por perfil de risco','Implemente análise de vintage para monitorar qualidade das safras','Desenvolva stress tests para avaliar impacto de cenários macro'],
+        dados_ml:['Implemente data warehouse moderno com camadas bronze/silver/gold','Desenvolva pipelines automatizados com orquestração (Airflow)','Implemente monitoramento de qualidade de dados com alertas','Coloque 2-3 modelos de ML em produção com monitoramento','Estabeleça processo de MLOps com CI/CD para modelos'],
+        automacao:['Implemente RPA para processos de maior volume e menor complexidade','Desenvolva detecção de anomalias com ML para alertas inteligentes','Automatize onboarding de clientes com validações automáticas','Implemente chatbot com IA para atendimento de primeiro nível','Crie framework de medição de ROI para todas as automações'],
+        dashboards:['Implemente análise preditiva nos dashboards principais','Desenvolva self-service analytics com governança adequada','Crie análise de causa raiz automatizada para desvios de KPIs','Implemente storytelling com dados nas apresentações executivas','Desenvolva dashboards personalizados por perfil de usuário']
+      },
+      avancado:{
+        supply_chain:['Explore IA generativa para otimização de contratos com fornecedores','Implemente digital twin da cadeia para simulações avançadas','Desenvolva modelos de otimização de rede logística multi-objetivo','Implemente IoT e RFID para rastreabilidade end-to-end em tempo real','Explore blockchain para transparência na cadeia de fornecimento'],
+        comercial:['Implemente personalização em escala com IA generativa no conteúdo','Desenvolva modelos de precificação dinâmica com análise de elasticidade','Explore revenue intelligence com análise de conversas de vendas','Implemente análise de sentimento em tempo real para satisfação','Desenvolva modelos de expansão com análise de potencial geoespacial'],
+        credito_risco:['Implemente modelos de crédito com dados alternativos e open banking','Desenvolva análise de risco sistêmico com correlações entre carteiras','Explore IA explicável (XAI) para conformidade regulatória','Implemente detecção de fraude em tempo real com análise comportamental','Desenvolva stress tests com cenários macroeconômicos dinâmicos'],
+        dados_ml:['Explore arquitetura de data mesh para descentralização com governança','Implemente feature store centralizado para reutilização entre modelos','Desenvolva plataforma de IA generativa interna com RAG sobre dados','Implemente análise causal para decisões de negócio mais robustas','Explore computação quântica para otimização de problemas complexos'],
+        automacao:['Implemente hyperautomation combinando RPA, IA e process mining','Desenvolva agentes de IA autônomos para processos de decisão complexos','Explore automação cognitiva com processamento de linguagem natural','Implemente orquestração inteligente com aprendizado contínuo','Desenvolva plataforma de automação self-service para usuários de negócio'],
+        dashboards:['Implemente decision intelligence com recomendações prescritivas automáticas','Explore IA generativa para geração automática de insights e narrativas','Desenvolva análise causal para atribuição de impacto de iniciativas','Implemente dashboards aumentados com realidade aumentada para operações','Explore análise de dados em tempo real com streaming analytics avançado']
+      }
+    };
+    return(r[level]&&r[level][areaId])?r[level][areaId]:['Agende uma reunião de diagnóstico com a O2 Data Solutions para recomendações personalizadas.','Avalie as outras áreas do diagnóstico para ter uma visão completa da maturidade analítica.','Defina um roadmap de dados alinhado às prioridades estratégicas do negócio.'];
+  }
+
+  // ── Submit ─────────────────────────────────────────────────────────────────
+  async function submitAssessment(area,avg,pct){
+    var payload=Object.assign({},state.profile,{area:area.id,scores:state.scores,total_score:avg,max_score:area.questions.length*10,percentage:pct});
+    try{
+      var res=await fetch('/api/assessment',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+      var data=await res.json();
+      if(res.ok){
+        var el=document.getElementById('submit-status');
+        el.classList.remove('hidden');
+        el.className='mt-4 p-3 rounded-xl text-sm font-medium text-center bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800/40 text-green-700 dark:text-green-400';
+        el.innerHTML='<i class="fa-solid fa-check-circle mr-2"></i>Resultado enviado! Verifique seu e-mail para o relatório completo.';
+      }
+    }catch(e){console.warn('Assessment submit:',e);}
+  }
+
+  function restartAssessment(){state.selectedAreaId=null;state.scores={};renderAreasGrid();goToStep(2);}
+
+  document.addEventListener('DOMContentLoaded',function(){updateStepIndicator(1);});
+  </script>
+</body>
+</html>

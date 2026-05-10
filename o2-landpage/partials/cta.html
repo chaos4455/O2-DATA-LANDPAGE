@@ -1,0 +1,134 @@
+<!-- PARTIAL: cta.html v3 — CTA com formulário real + WhatsApp + Email -->
+<section id="contato" class="py-24 bg-white dark:bg-dark-bg">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <div class="brand-gradient rounded-[2.5rem] p-8 md:p-14 relative overflow-hidden shadow-2xl glow-brand">
+      <div class="dot-pattern absolute inset-0 opacity-25"></div>
+
+      <div class="relative z-10 grid lg:grid-cols-2 gap-12 items-start">
+
+        <!-- Left: Copy -->
+        <div>
+          <div class="tag-pill bg-white/15 text-white border border-white/25 mb-6">
+            <i class="fa-solid fa-calendar-check"></i> Diagnóstico 100% Gratuito
+          </div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4 leading-tight">
+            Pronto para transformar dados em vantagem competitiva?
+          </h2>
+          <p class="text-blue-100 text-base mb-8 leading-relaxed">
+            Em <strong class="text-white">60 minutos</strong> identificamos as maiores oportunidades de dados
+            no seu negócio — sem compromisso, sem enrolação.
+            Atendemos empresas de todo o Brasil remotamente.
+          </p>
+
+          <!-- Contact options -->
+          <div class="space-y-3 mb-8">
+            <button onclick="trackWhatsApp('cta')"
+               class="w-full flex items-center gap-4 p-4 rounded-2xl bg-white/10 border border-white/20 hover:bg-white/20 transition-all text-left group">
+              <div class="w-12 h-12 rounded-xl bg-green-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-green-500/30 group-hover:scale-105 transition-transform">
+                <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+              </div>
+              <div class="flex-1">
+                <p class="text-white font-bold text-sm">WhatsApp Comercial</p>
+                <p class="text-blue-200 text-xs">+55 (11) 9 1335-3137 &middot; Resposta em minutos</p>
+              </div>
+              <i class="fa-solid fa-arrow-right text-white/40 group-hover:text-white/80 group-hover:translate-x-1 transition-all"></i>
+            </button>
+
+            <a href="mailto:elias@o2data.com.br"
+               class="w-full flex items-center gap-4 p-4 rounded-2xl bg-white/10 border border-white/20 hover:bg-white/20 transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-blue-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-envelope text-white text-lg"></i>
+              </div>
+              <div class="flex-1">
+                <p class="text-white font-bold text-sm">E-mail Direto</p>
+                <p class="text-blue-200 text-xs">elias@o2data.com.br &middot; Resposta em até 1 dia útil</p>
+              </div>
+              <i class="fa-solid fa-arrow-right text-white/40 group-hover:text-white/80 group-hover:translate-x-1 transition-all"></i>
+            </a>
+          </div>
+
+          <!-- Trust signals -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="flex items-center gap-2 text-blue-200 text-xs">
+              <i class="fa-solid fa-map-location-dot text-blue-300 flex-shrink-0"></i>
+              <span>Maringá, PR &middot; Todo o Brasil</span>
+            </div>
+            <div class="flex items-center gap-2 text-blue-200 text-xs">
+              <i class="fa-solid fa-lock text-blue-300 flex-shrink-0"></i>
+              <span>Dados protegidos pela LGPD</span>
+            </div>
+            <div class="flex items-center gap-2 text-blue-200 text-xs">
+              <i class="fa-solid fa-clock text-blue-300 flex-shrink-0"></i>
+              <span>1h de reunião de diagnóstico gratuita</span>
+            </div>
+            <div class="flex items-center gap-2 text-blue-200 text-xs">
+              <i class="fa-solid fa-circle-check text-green-400 flex-shrink-0"></i>
+              <span>Sem compromisso</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 md:p-8">
+          <h3 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
+            <i class="fa-solid fa-paper-plane text-blue-300"></i>
+            Agendar Reunião de Diagnóstico
+          </h3>
+          <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-white/70 text-[10px] font-bold mb-1.5 uppercase tracking-widest">Nome *</label>
+                <input type="text" name="name" required placeholder="Seu nome"
+                  class="form-input form-input-light">
+              </div>
+              <div>
+                <label class="block text-white/70 text-[10px] font-bold mb-1.5 uppercase tracking-widest">Empresa *</label>
+                <input type="text" name="company" required placeholder="Nome da empresa"
+                  class="form-input form-input-light">
+              </div>
+            </div>
+            <div>
+              <label class="block text-white/70 text-[10px] font-bold mb-1.5 uppercase tracking-widest">E-mail corporativo *</label>
+              <input type="email" name="email" required placeholder="voce@empresa.com.br"
+                class="form-input form-input-light">
+            </div>
+            <div>
+              <label class="block text-white/70 text-[10px] font-bold mb-1.5 uppercase tracking-widest">WhatsApp</label>
+              <input type="tel" name="phone" placeholder="+55 (11) 9 0000-0000"
+                class="form-input form-input-light">
+            </div>
+            <div>
+              <label class="block text-white/70 text-[10px] font-bold mb-1.5 uppercase tracking-widest">Principal desafio *</label>
+              <select name="challenge" required class="form-input form-input-light appearance-none cursor-pointer">
+                <option value="" class="text-slate-800 bg-white">Selecione o maior desafio...</option>
+                <option value="supply_chain" class="text-slate-800 bg-white">Supply Chain & Estoque</option>
+                <option value="comercial" class="text-slate-800 bg-white">Inteligência Comercial & RevOps</option>
+                <option value="credito" class="text-slate-800 bg-white">Crédito & Risco</option>
+                <option value="dados" class="text-slate-800 bg-white">Engenharia de Dados</option>
+                <option value="analytics" class="text-slate-800 bg-white">Analytics & BI</option>
+                <option value="diagnostico" class="text-slate-800 bg-white">Diagnóstico Geral</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-white/70 text-[10px] font-bold mb-1.5 uppercase tracking-widest">Contexto (opcional)</label>
+              <textarea name="message" rows="3"
+                placeholder="Descreva brevemente o problema ou o que espera da conversa..."
+                class="form-input form-input-light resize-none"></textarea>
+            </div>
+            <button type="submit" id="submit-btn"
+              class="w-full bg-white text-brand-600 px-8 py-4 rounded-full font-extrabold shadow-xl hover:scale-[1.02] transition-transform text-sm">
+              <i class="fa-solid fa-calendar-check mr-2"></i>
+              Agendar Reunião de Diagnóstico
+            </button>
+            <p class="text-center text-blue-200/50 text-[10px]">
+              <i class="fa-solid fa-lock mr-1"></i>
+              Seus dados são protegidos pela LGPD. Sem spam, sem compromisso.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+# ============================================================
+#  O2 Data Solutions — Configuração Geral da Aplicação
+# ============================================================
+app:
+  name: "O2 Data Solutions"
+  tagline: "Consultoria em Dados, IA e Machine Learning"
+  city: "Maringá, Paraná"
+  country: "Brasil"
+  coverage: "Atendimento remoto em todo o Brasil"
+  year: 2025
+  url: "https://o2data.com.br"
+  version: "2.1.0"
+
+contact:
+  whatsapp: "5511913353137"
+  whatsapp_display: "+55 (11) 9 1335-3137"
+  email: "elias@o2data.com.br"
+  email_contact: "contato@o2data.com.br"
+
+social:
+  linkedin: "https://linkedin.com/company/o2datasolutions"
+  instagram: "https://instagram.com/o2datasolutions"
+
+theme:
+  default: "dark"
+  cookie_name: "o2_theme"
+  cookie_days: 365

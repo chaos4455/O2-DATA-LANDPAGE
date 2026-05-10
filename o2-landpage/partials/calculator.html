@@ -1,0 +1,158 @@
+<!-- PARTIAL: calculator.html v2 — Calculadora de ROI Rica por Setor e Problema -->
+<section id="calculadora" class="py-28 relative overflow-hidden">
+  <div class="absolute inset-0 mesh-bg"></div>
+  <div class="absolute inset-0 opacity-[0.03]"
+       style="background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')"></div>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+
+    <!-- Header -->
+    <div class="text-center mb-14 reveal">
+      <div class="section-label bg-white/10 text-blue-200 border border-white/15 mb-6">
+        <i class="fa-solid fa-calculator"></i>
+        Calculadora de ROI
+      </div>
+      <h2 class="text-4xl md:text-5xl font-black text-white mb-4 leading-tight">
+        Quanto sua empresa está<br>
+        <span style="background:linear-gradient(135deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
+          perdendo agora?
+        </span>
+      </h2>
+      <p class="text-blue-200/80 text-base max-w-2xl mx-auto leading-relaxed">
+        Selecione seu setor, escolha o problema que mais impacta seu negócio, preencha os dados reais da sua operação
+        e veja a estimativa de perdas — e o potencial de ganho com nossas soluções.
+      </p>
+    </div>
+
+    <!-- Calculator card -->
+    <div class="reveal rounded-3xl overflow-hidden"
+         style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);backdrop-filter:blur(20px)">
+      <div class="h-px w-full" style="background:linear-gradient(90deg,transparent,rgba(99,102,241,0.6),rgba(168,85,247,0.6),transparent)"></div>
+
+      <div class="p-6 md:p-10">
+
+        <!-- Step 0: Setor -->
+        <div class="mb-8">
+          <p class="text-[10px] font-bold text-blue-300/70 uppercase tracking-widest mb-3">
+            <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-500/20 text-blue-300 text-[9px] font-black mr-2">1</span>
+            Qual é o setor da sua empresa?
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3" id="calc-sector-grid">
+            <button onclick="calcSelectSector('varejo')" data-s="varejo"
+              class="calc-sector-btn flex flex-col items-center gap-2 p-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-blue-400/50 transition-all text-center group">
+              <i class="fa-solid fa-store text-blue-400 text-xl group-hover:scale-110 transition-transform"></i>
+              <span class="text-white text-xs font-bold">Varejo / E-commerce</span>
+            </button>
+            <button onclick="calcSelectSector('industria')" data-s="industria"
+              class="calc-sector-btn flex flex-col items-center gap-2 p-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-orange-400/50 transition-all text-center group">
+              <i class="fa-solid fa-industry text-orange-400 text-xl group-hover:scale-110 transition-transform"></i>
+              <span class="text-white text-xs font-bold">Indústria / Produção</span>
+            </button>
+            <button onclick="calcSelectSector('distribuicao')" data-s="distribuicao"
+              class="calc-sector-btn flex flex-col items-center gap-2 p-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-teal-400/50 transition-all text-center group">
+              <i class="fa-solid fa-truck-fast text-teal-400 text-xl group-hover:scale-110 transition-transform"></i>
+              <span class="text-white text-xs font-bold">Distribuição / Atacado</span>
+            </button>
+            <button onclick="calcSelectSector('servicos')" data-s="servicos"
+              class="calc-sector-btn flex flex-col items-center gap-2 p-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-purple-400/50 transition-all text-center group">
+              <i class="fa-solid fa-briefcase text-purple-400 text-xl group-hover:scale-110 transition-transform"></i>
+              <span class="text-white text-xs font-bold">Serviços / B2B</span>
+            </button>
+            <button onclick="calcSelectSector('importacao')" data-s="importacao"
+              class="calc-sector-btn flex flex-col items-center gap-2 p-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-yellow-400/50 transition-all text-center group">
+              <i class="fa-solid fa-ship text-yellow-400 text-xl group-hover:scale-110 transition-transform"></i>
+              <span class="text-white text-xs font-bold">Importação / Comércio Ext.</span>
+            </button>
+            <button onclick="calcSelectSector('agro')" data-s="agro"
+              class="calc-sector-btn flex flex-col items-center gap-2 p-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-green-400/50 transition-all text-center group">
+              <i class="fa-solid fa-wheat-awn text-green-400 text-xl group-hover:scale-110 transition-transform"></i>
+              <span class="text-white text-xs font-bold">Agronegócio / Coop.</span>
+            </button>
+            <button onclick="calcSelectSector('saude')" data-s="saude"
+              class="calc-sector-btn flex flex-col items-center gap-2 p-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-red-400/50 transition-all text-center group">
+              <i class="fa-solid fa-hospital text-red-400 text-xl group-hover:scale-110 transition-transform"></i>
+              <span class="text-white text-xs font-bold">Saúde / Farmácia</span>
+            </button>
+            <button onclick="calcSelectSector('financeiro')" data-s="financeiro"
+              class="calc-sector-btn flex flex-col items-center gap-2 p-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-cyan-400/50 transition-all text-center group">
+              <i class="fa-solid fa-landmark text-cyan-400 text-xl group-hover:scale-110 transition-transform"></i>
+              <span class="text-white text-xs font-bold">Financeiro / Crédito</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 1: Problema (dinâmico por setor) -->
+        <div id="calc-problem-wrap" class="hidden mb-8">
+          <p class="text-[10px] font-bold text-blue-300/70 uppercase tracking-widest mb-3">
+            <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-500/20 text-blue-300 text-[9px] font-black mr-2">2</span>
+            Qual problema você quer calcular?
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3" id="calc-problem-grid"></div>
+        </div>
+
+        <!-- Step 2: Inputs (dinâmico por problema) -->
+        <div id="calc-inputs" class="hidden mb-8">
+          <p class="text-[10px] font-bold text-blue-300/70 uppercase tracking-widest mb-4">
+            <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-500/20 text-blue-300 text-[9px] font-black mr-2">3</span>
+            Dados da sua operação
+          </p>
+          <div id="calc-fields" class="grid md:grid-cols-2 gap-4"></div>
+          <div class="mt-4 flex items-start gap-2 p-3 rounded-xl" style="background:rgba(99,102,241,0.08);border:1px solid rgba(99,102,241,0.2)">
+            <i class="fa-solid fa-circle-info text-indigo-400 text-xs mt-0.5 flex-shrink-0"></i>
+            <p id="calc-benchmark-note" class="text-indigo-300/70 text-[11px] leading-relaxed"></p>
+          </div>
+        </div>
+
+        <!-- Step 3: Resultado -->
+        <div id="calc-result" class="hidden">
+          <div class="h-px w-full mb-8" style="background:linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent)"></div>
+          <p class="text-[10px] font-bold text-blue-300/70 uppercase tracking-widest mb-6">
+            <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-500/20 text-blue-300 text-[9px] font-black mr-2">4</span>
+            Estimativa de impacto financeiro
+          </p>
+
+          <!-- Perda atual -->
+          <div class="mb-6">
+            <p class="text-[10px] font-bold text-red-400/70 uppercase tracking-widest mb-3">📉 O que você está perdendo hoje</p>
+            <div class="grid md:grid-cols-3 gap-4" id="calc-loss-cards"></div>
+          </div>
+
+          <!-- Ganho potencial -->
+          <div class="mb-6">
+            <p class="text-[10px] font-bold text-green-400/70 uppercase tracking-widest mb-3">📈 Potencial de ganho com O2 Data Solutions</p>
+            <div class="grid md:grid-cols-3 gap-4" id="calc-gain-cards"></div>
+          </div>
+
+          <!-- ROI box -->
+          <div class="rounded-2xl p-6 mb-6" style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2)">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-green-500/15 flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-rocket text-green-400"></i>
+              </div>
+              <div class="flex-1">
+                <p class="text-green-300 font-bold text-sm mb-1">Com as soluções O2 Data Solutions</p>
+                <p id="calc-roi-text" class="text-green-200/80 text-sm leading-relaxed"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeção temporal -->
+          <div class="rounded-2xl p-6 mb-6" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08)">
+            <p class="text-[10px] font-bold text-blue-300/70 uppercase tracking-widest mb-4">Projeção de recuperação</p>
+            <div class="grid grid-cols-4 gap-3" id="calc-timeline"></div>
+          </div>
+
+          <div class="mt-4 text-center">
+            <p class="text-blue-300/40 text-xs mb-4">* Estimativas baseadas em benchmarks de mercado e resultados médios de projetos similares. Valores reais dependem da operação específica.</p>
+            <a href="#contato"
+               class="inline-flex items-center gap-2 brand-gradient text-white px-7 py-3.5 rounded-2xl font-bold shadow-xl shadow-brand-500/25 hover:shadow-brand-500/45 hover:-translate-y-0.5 transition-all text-sm">
+              <i class="fa-solid fa-calendar-check"></i>
+              Quero calcular o ROI real da minha empresa
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

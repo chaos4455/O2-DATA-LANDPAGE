@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O2 Data Solutions — Consultoria em Dados, IA e Machine Learning</title>
+  <meta name="description" content="Consultoria B2B especializada em Dados, IA e Machine Learning. Soluções para Supply Chain, Inteligência Comercial, Crédito e Risco. Maringá, Paraná. Atendimento remoto em todo o Brasil.">
+  <meta name="keywords" content="consultoria dados, machine learning, inteligência artificial, supply chain, crédito risco, RevOps, Maringá, Paraná, Brasil">
+  <meta property="og:title" content="O2 Data Solutions — Dados que geram resultado">
+  <meta property="og:description" content="Consultoria B2B em Dados, IA e ML. Frameworks proprietários. ROI mensurável.">
+  <meta property="og:type" content="website">
+
+  <!-- Anti-flash: aplica tema ANTES do render para evitar piscar -->
+  <script>
+    (function(){
+      function gc(n){var m=document.cookie.match('(^| )'+n+'=([^;]+)');return m?m[2]:null;}
+      var t=gc('o2_theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+      if(t==='dark')document.documentElement.classList.replace('light','dark');
+    })();
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: {
+            brand: { 50:'#eff6ff', 100:'#dbeafe', 500:'#3b82f6', 600:'#2563eb', 900:'#1e3a8a' },
+            dark:  { bg:'#080c18', card:'#0d1526', border:'#1a2640' },
+            accent:{ 50:'#f5f3ff', 100:'#ede9fe', 500:'#8b5cf6', 600:'#7c3aed' }
+          },
+          animation: {
+            'blob':       'blob 7s infinite',
+            'float':      'float 6s ease-in-out infinite',
+            'fade-in-up': 'fadeInUp 0.8s ease-out forwards'
+          },
+          keyframes: {
+            blob: {
+              '0%':   { transform: 'translate(0px,0px) scale(1)' },
+              '33%':  { transform: 'translate(30px,-50px) scale(1.1)' },
+              '66%':  { transform: 'translate(-20px,20px) scale(0.9)' },
+              '100%': { transform: 'translate(0px,0px) scale(1)' }
+            },
+            float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-18px)' } },
+            fadeInUp: { '0%': { opacity:'0', transform:'translateY(20px)' }, '100%': { opacity:'1', transform:'translateY(0)' } }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/config.js"></script>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-dark-bg dark:text-slate-200 transition-colors duration-300 antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Slots de partials — cada seção é independente e expansível -->
+  <div id="slot-navbar"></div>
+  <div id="slot-hero"></div>
+  <div id="slot-logos"></div>
+  <div id="slot-services"></div>
+  <div id="slot-modelos"></div>
+  <div id="slot-problems"></div>
+  <div id="slot-methodology"></div>
+  <div id="slot-calculator"></div>
+  <div id="slot-metrics"></div>
+  <div id="slot-cta"></div>
+  <div id="slot-footer"></div>
+  <!-- Cookie consent + WAF (carregado por último) -->
+  <div id="slot-consent"></div>
+
+  <script>
+    const PARTIALS = [
+      { slot:'slot-navbar',      file:'partials/navbar.html'      },
+      { slot:'slot-hero',        file:'partials/hero.html'        },
+      { slot:'slot-logos',       file:'partials/logos.html'       },
+      { slot:'slot-services',    file:'partials/services.html'    },
+      { slot:'slot-modelos',     file:'partials/modelos.html'     },
+      { slot:'slot-problems',    file:'partials/problems.html'    },
+      { slot:'slot-methodology', file:'partials/methodology.html' },
+      { slot:'slot-calculator',  file:'partials/calculator.html'  },
+      { slot:'slot-metrics',     file:'partials/metrics.html'     },
+      { slot:'slot-cta',         file:'partials/cta.html'         },
+      { slot:'slot-footer',      file:'partials/footer.html'      },
+      { slot:'slot-consent',     file:'partials/cookie-consent.html' },
+    ];
+
+    async function loadPartials() {
+      for (const {slot, file} of PARTIALS) {
+        try {
+          const r = await fetch(file);
+          if (!r.ok) throw new Error(r.status);
+          document.getElementById(slot).innerHTML = await r.text();
+        } catch(e) { console.warn('[O2] Partial nao carregado:', file, e.message); }
+      }
+      initApp();
+    }
+
+    function initApp() {
+      // ── Dark mode ──────────────────────────────────────────
+      function gc(n) { var m = document.cookie.match('(^| )' + n + '=([^;]+)'); return m ? m[2] : null; }
+      function sc(n, v, d) {
+        var e = new Date(); e.setTime(e.getTime() + d * 864e5);
+        document.cookie = n + '=' + v + ';expires=' + e.toUTCString() + ';path=/;SameSite=Lax';
+      }
+      function applyTheme(t) {
+        var html = document.documentElement;
+        var icons = [document.getElementById('theme-icon'), document.getElementById('theme-icon-mobile')];
+        if (t === 'dark') {
+          html.classList.add('dark');
+          icons.forEach(function(i) { if (i) { i.classList.remove('fa-moon'); i.classList.add('fa-sun'); } });
+        } else {
+          html.classList.remove('dark');
+          icons.forEach(function(i) { if (i) { i.classList.remove('fa-sun'); i.classList.add('fa-moon'); } });
+        }
+      }
+      var saved = gc('o2_theme');
+      var sys = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      applyTheme(saved || sys);
+      if (!saved) sc('o2_theme', sys, 365);
+
+      // ── Navbar scroll ──────────────────────────────────────
+      window.addEventListener('scroll', function() {
+        var nav = document.getElementById('main-nav');
+        if (nav) nav.classList.toggle('shadow-xl', window.scrollY > 30);
+      }, { passive: true });
+
+      // ── Smooth scroll ──────────────────────────────────────
+      document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+          var t = document.querySelector(this.getAttribute('href'));
+          if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+          var m = document.getElementById('mobile-menu');
+          if (m) m.classList.add('hidden');
+        });
+      });
+
+      // ── Reveal on scroll (re-init after partials load) ─────
+      var revealObs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el); });
+
+      // ── Load calculator script (after partials are in DOM) ──
+      (function loadCalc() {
+        var s = document.createElement('script');
+        s.src = 'assets/js/calculator.js?v=' + Date.now();
+        s.onerror = function() { console.warn('[O2] calculator.js nao carregado'); };
+        document.body.appendChild(s);
+      })();
+
+      // ── Visitor data collection ────────────────────────────
+      var visitorData = {
+        screen: screen.width + 'x' + screen.height,
+        tz: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        lang: navigator.language,
+        cores: navigator.hardwareConcurrency || 0,
+        referrer: document.referrer,
+        path: window.location.pathname,
+      };
+      fetch('/api/event', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({event:'page_load', data: visitorData})
+      }).catch(function(){});
+    }
+
+    loadPartials();
+  </script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+# ============================================================
+#  O2 Data Solutions — Segurança e WAF
+# ============================================================
+waf:
+  enabled: true
+  challenge_interval_hours: 24
+  cookie_name: "o2_waf_pass"
+  cookie_days: 1
+  block_cookie_name: "o2_waf_blocked"
+  challenge_page: "/waf-challenge"
+
+rate_limit:
+  enabled: true
+  window_seconds: 60
+  max_requests: 120          # por IP por janela
+  max_api_requests: 20       # /api/* por IP por janela
+  ban_threshold: 5           # violações antes do ban
+  ban_duration_minutes: 60
+  whitelist_ips:
+    - "127.0.0.1"
+    - "::1"
+
+ip_ban:
+  enabled: true
+  auto_ban_on_sqli: true
+  auto_ban_on_xss: true
+  auto_ban_on_path_traversal: true
+  auto_ban_on_scanner: true
+  permanent_ban: []          # IPs banidos permanentemente
+  ban_db: "data/bans.db"
+
+headers:
+  x_frame_options: "DENY"
+  x_content_type_options: "nosniff"
+  x_xss_protection: "1; mode=block"
+  referrer_policy: "strict-origin-when-cross-origin"
+  permissions_policy: "camera=(), microphone=(), geolocation=()"
+  hsts: "max-age=31536000; includeSubDomains"
+
+sqli_patterns:
+  - "union.*select"
+  - "select.*from"
+  - "drop.*table"
+  - "insert.*into"
+  - "delete.*from"
+  - "exec.*\\("
+  - "xp_cmdshell"
+  - "information_schema"
+  - "or '1'='1"
+  - "--\\s"
+  - "/\\*"
+
+xss_patterns:
+  - "<script"
+  - "javascript:"
+  - "onerror="
+  - "onload="
+  - "eval\\("
+  - "document\\.cookie"
+  - "alert\\("
+
+scanner_ua_patterns:
+  - "sqlmap"
+  - "nikto"
+  - "nmap"
+  - "masscan"
+  - "zgrab"
+  - "nuclei"
+  - "dirbuster"
+  - "gobuster"
+  - "wfuzz"
+  - "burpsuite"
+  - "acunetix"
+  - "nessus"

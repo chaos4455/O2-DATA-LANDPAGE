@@ -1,0 +1,46 @@
+# ============================================================
+#  O2 Data Solutions — Consentimento e LGPD
+# ============================================================
+consent:
+  cookie_name: "o2_consent"
+  cookie_days: 365
+  version: "1.0"
+  required: true
+  implicit_on_submit: true    # Ao enviar formulário = aceite
+
+cookies:
+  theme:
+    name: "o2_theme"
+    purpose: "Preferência de tema (claro/escuro)"
+    duration: "365 dias"
+    category: "funcional"
+  visitor_id:
+    name: "o2_vid"
+    purpose: "Identificação única de visitante para analytics"
+    duration: "365 dias"
+    category: "analytics"
+  session:
+    name: "o2_sid"
+    purpose: "Sessão de navegação"
+    duration: "30 minutos"
+    category: "funcional"
+  waf:
+    name: "o2_waf_pass"
+    purpose: "Verificação de segurança WAF"
+    duration: "24 horas"
+    category: "segurança"
+  consent:
+    name: "o2_consent"
+    purpose: "Registro do consentimento LGPD"
+    duration: "365 dias"
+    category: "legal"
+
+marketing:
+  email_marketing: true
+  whatsapp_marketing: true
+  retargeting: true
+  analytics: true
+  implicit_consent_text: >
+    Ao enviar este formulário, você concorda com nossa
+    Política de Privacidade e autoriza o contato comercial
+    pela O2 Data Solutions via e-mail e WhatsApp.

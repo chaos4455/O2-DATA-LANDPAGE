@@ -1,0 +1,87 @@
+<!-- PARTIAL: navbar.html v4 — with Assessment link -->
+<nav id="main-nav" class="fixed w-full z-50 glass-nav transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-[72px] flex items-center justify-between gap-4">
+
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-3 group flex-shrink-0">
+      <div class="w-10 h-10 rounded-xl brand-gradient flex items-center justify-center text-white shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">
+        <i class="fa-solid fa-circle-nodes text-lg"></i>
+      </div>
+      <div class="leading-none">
+        <span class="font-extrabold text-[1.2rem] tracking-tight text-slate-900 dark:text-white">O2 Data<span class="text-brand-500">.</span></span>
+        <span class="block text-[9px] font-semibold text-slate-400 dark:text-slate-500 tracking-widest uppercase">Solutions</span>
+      </div>
+    </a>
+
+    <!-- Links Desktop -->
+    <div class="hidden lg:flex items-center gap-5 font-semibold text-sm text-slate-600 dark:text-slate-300">
+      <a href="#solucoes"    class="hover:text-brand-600 dark:hover:text-blue-400 transition-colors py-1">Soluções</a>
+      <a href="#problemas"   class="hover:text-brand-600 dark:hover:text-blue-400 transition-colors py-1">Problemas</a>
+      <a href="#metodologia" class="hover:text-brand-600 dark:hover:text-blue-400 transition-colors py-1">Metodologia</a>
+      <a href="#resultados"  class="hover:text-brand-600 dark:hover:text-blue-400 transition-colors py-1">Resultados</a>
+      <a href="#contato"     class="hover:text-brand-600 dark:hover:text-blue-400 transition-colors py-1">Contato</a>
+      <!-- Assessment link with badge -->
+      <a href="/avaliacao.html"
+         class="flex items-center gap-1.5 py-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-bold">
+        <i class="fa-solid fa-clipboard-check text-xs"></i>
+        Avaliação
+        <span class="px-1.5 py-0.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[9px] font-extrabold border border-green-200 dark:border-green-800/40 leading-none">Grátis</span>
+      </a>
+    </div>
+
+    <!-- Actions Desktop -->
+    <div class="hidden lg:flex items-center gap-3 flex-shrink-0">
+      <button onclick="toggleTheme()" aria-label="Alternar tema"
+        class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800/80 flex items-center justify-center text-slate-500 hover:text-brand-500 dark:hover:text-blue-400 transition-colors">
+        <i id="theme-icon" class="fa-solid fa-moon text-sm"></i>
+      </button>
+      <a href="https://wa.me/5511913353137?text=Ol%C3%A1%21+Vim+pelo+site+da+O2+Data+Solutions+e+gostaria+de+agendar+um+diagn%C3%B3stico+gratuito."
+         target="_blank" rel="noopener"
+         class="flex items-center gap-2 text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-green-500 transition-colors px-3 py-2 rounded-xl hover:bg-green-50 dark:hover:bg-green-900/20">
+        <i class="fa-brands fa-whatsapp text-green-500 text-base"></i>
+        <span class="hidden xl:inline">(11) 9 1335-3137</span>
+      </a>
+      <a href="#contato"
+         class="brand-gradient text-white px-5 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-brand-500/25 hover:shadow-brand-500/45 hover:-translate-y-0.5 transition-all whitespace-nowrap">
+        Reunião de Diagnóstico
+      </a>
+    </div>
+
+    <!-- Mobile controls -->
+    <div class="flex lg:hidden items-center gap-2">
+      <button onclick="toggleTheme()" aria-label="Alternar tema"
+        class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500">
+        <i id="theme-icon-mobile" class="fa-solid fa-moon text-sm"></i>
+      </button>
+      <button onclick="toggleMobileMenu()" aria-label="Menu"
+        class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300">
+        <i class="fa-solid fa-bars text-sm"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-dark-bg/95 backdrop-blur-xl px-4 py-4 space-y-1">
+    <a href="#solucoes"    class="flex items-center gap-3 py-3 px-4 rounded-xl font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><i class="fa-solid fa-layer-group text-brand-500 w-4"></i>Soluções</a>
+    <a href="#problemas"   class="flex items-center gap-3 py-3 px-4 rounded-xl font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><i class="fa-solid fa-triangle-exclamation text-red-500 w-4"></i>Problemas</a>
+    <a href="#metodologia" class="flex items-center gap-3 py-3 px-4 rounded-xl font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><i class="fa-solid fa-diagram-project text-purple-500 w-4"></i>Metodologia</a>
+    <a href="#resultados"  class="flex items-center gap-3 py-3 px-4 rounded-xl font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><i class="fa-solid fa-chart-line text-green-500 w-4"></i>Resultados</a>
+    <a href="#contato"     class="flex items-center gap-3 py-3 px-4 rounded-xl font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><i class="fa-solid fa-envelope text-blue-500 w-4"></i>Contato</a>
+    <!-- Assessment mobile link -->
+    <a href="/avaliacao.html"
+       class="flex items-center gap-3 py-3 px-4 rounded-xl font-bold text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors border border-blue-100 dark:border-blue-900/30">
+      <i class="fa-solid fa-clipboard-check text-blue-500 w-4"></i>
+      Avaliação de Maturidade
+      <span class="ml-auto px-2 py-0.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[9px] font-extrabold border border-green-200 dark:border-green-800/40">Grátis</span>
+    </a>
+    <div class="pt-3 flex flex-col gap-2.5">
+      <a href="https://wa.me/5511913353137" target="_blank" rel="noopener"
+         class="flex items-center justify-center gap-2.5 py-3.5 rounded-2xl bg-green-500 text-white font-bold text-sm shadow-lg shadow-green-500/30">
+        <i class="fa-brands fa-whatsapp text-lg"></i> (11) 9 1335-3137 — Falar Agora
+      </a>
+      <a href="#contato" class="brand-gradient text-white py-3.5 rounded-2xl font-bold text-sm text-center shadow-lg shadow-brand-500/30">
+        <i class="fa-solid fa-calendar-check mr-2"></i>Reunião de Diagnóstico
+      </a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,21 @@
+# ============================================================
+#  O2 Data Solutions — Configuração de E-mail (Brevo/SMTP)
+# ============================================================
+smtp:
+  host: "smtp-relay.brevo.com"
+  port: 465
+  use_ssl: true
+  username: "chaos4455@gmail.com"
+  password: "pZz9rCt2I5SdjKsY"
+
+sender:
+  name: "O2 Data Solutions"
+  email: "contato@o2data.com.br"
+
+recipients:
+  primary: "elias@o2data.com.br"
+  backup: "otimizaestoqu@gmail.com"
+
+templates:
+  subject_lead: "[O2 Lead] Novo contato: {name} — {company}"
+  subject_confirm: "Recebemos seu contato — O2 Data Solutions"

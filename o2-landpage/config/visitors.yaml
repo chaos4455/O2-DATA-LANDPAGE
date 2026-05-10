@@ -1,0 +1,34 @@
+# ============================================================
+#  O2 Data Solutions — Captura de Visitantes
+# ============================================================
+visitors:
+  db: "data/visitors.db"
+  cookie_name: "o2_vid"
+  cookie_days: 365
+  session_cookie: "o2_sid"
+  session_minutes: 30
+  consent_cookie: "o2_consent"
+  consent_days: 365
+
+capture:
+  ip: true
+  user_agent: true
+  browser: true
+  os: true
+  device: true
+  referrer: true
+  utm_params: true
+  screen_resolution: true
+  timezone: true
+  language: true
+  page_views: true
+  time_on_page: true
+  scroll_depth: true
+  clicks: true
+  form_interactions: true
+
+export:
+  yaml_file: "data/visitors_log.yaml"
+  json_file: "data/visitors_log.json"
+  md_file: "data/visitors_log.md"
+  incremental: true           # Nunca sobrescreve, só appenda

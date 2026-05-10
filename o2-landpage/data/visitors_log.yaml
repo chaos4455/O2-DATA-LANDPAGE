@@ -1,0 +1,900 @@
+- ts: 2026-05-09T20:33:02.987107
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /
+  event: pageview
+- ts: 2026-05-09T20:33:04.962700
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/navbar.html
+  event: pageview
+- ts: 2026-05-09T20:33:04.990707
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/hero.html
+  event: pageview
+- ts: 2026-05-09T20:33:05.039703
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/logos.html
+  event: pageview
+- ts: 2026-05-09T20:33:05.106705
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/services.html
+  event: pageview
+- ts: 2026-05-09T20:33:05.172705
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/problems.html
+  event: pageview
+- ts: 2026-05-09T20:33:05.226703
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/methodology.html
+  event: pageview
+- ts: 2026-05-09T20:33:07.719864
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/metrics.html
+  event: pageview
+- ts: 2026-05-09T20:33:07.731867
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /
+  event: pageview
+- ts: 2026-05-09T20:33:09.652867
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/navbar.html
+  event: pageview
+- ts: 2026-05-09T20:33:09.965870
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/metrics.html
+  event: pageview
+- ts: 2026-05-09T20:33:10.019865
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cta.html
+  event: pageview
+- ts: 2026-05-09T20:33:12.437670
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/footer.html
+  event: pageview
+- ts: 2026-05-09T20:33:12.484681
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cookie-consent.html
+  event: pageview
+- ts: 2026-05-09T20:38:20.065331
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /
+  event: pageview
+- ts: 2026-05-09T20:38:22.361314
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cookie-consent.html
+  event: pageview
+- ts: 2026-05-09T20:41:22.772981
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /
+  event: pageview
+- ts: 2026-05-09T20:41:25.055980
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/navbar.html
+  event: pageview
+- ts: 2026-05-09T20:41:25.099980
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/hero.html
+  event: pageview
+- ts: 2026-05-09T20:41:25.142977
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/logos.html
+  event: pageview
+- ts: 2026-05-09T20:41:25.212982
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/services.html
+  event: pageview
+- ts: 2026-05-09T20:41:28.281980
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/problems.html
+  event: pageview
+- ts: 2026-05-09T20:41:28.331978
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/methodology.html
+  event: pageview
+- ts: 2026-05-09T20:41:28.380987
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/metrics.html
+  event: pageview
+- ts: 2026-05-09T20:41:28.425974
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cta.html
+  event: pageview
+- ts: 2026-05-09T20:41:28.492983
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/footer.html
+  event: pageview
+- ts: 2026-05-09T20:44:26.992315
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/hero.html
+  event: pageview
+- ts: 2026-05-09T20:44:27.241321
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/services.html
+  event: pageview
+- ts: 2026-05-09T20:44:27.292311
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/problems.html
+  event: pageview
+- ts: 2026-05-09T20:44:27.342312
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/methodology.html
+  event: pageview
+- ts: 2026-05-09T20:44:30.184845
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/metrics.html
+  event: pageview
+- ts: 2026-05-09T20:44:30.358841
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cookie-consent.html
+  event: pageview
+- ts: 2026-05-09T20:44:32.578386
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /
+  event: pageview
+- ts: 2026-05-09T20:44:34.513709
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/navbar.html
+  event: pageview
+- ts: 2026-05-09T21:32:30.035344
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /
+  event: pageview
+- ts: 2026-05-09T21:32:30.270345
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/navbar.html
+  event: pageview
+- ts: 2026-05-09T21:32:30.285345
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/hero.html
+  event: pageview
+- ts: 2026-05-09T21:32:30.350346
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/logos.html
+  event: pageview
+- ts: 2026-05-09T21:32:30.430354
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/services.html
+  event: pageview
+- ts: 2026-05-09T21:32:30.479358
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/problems.html
+  event: pageview
+- ts: 2026-05-09T21:32:30.556357
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/methodology.html
+  event: pageview
+- ts: 2026-05-09T21:32:30.612344
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/metrics.html
+  event: pageview
+- ts: 2026-05-09T21:32:30.671353
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cta.html
+  event: pageview
+- ts: 2026-05-09T21:32:30.745349
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/footer.html
+  event: pageview
+- ts: 2026-05-09T21:32:30.817348
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cookie-consent.html
+  event: pageview
+- ts: 2026-05-09T21:32:33.119192
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /avaliacao.html
+  event: pageview
+- ts: 2026-05-09T21:33:43.097553
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: ""
+  path: /api/assessment
+  event: assessment_submit
+- ts: 2026-05-09T21:35:15.372113
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/navbar.html
+  event: pageview
+- ts: 2026-05-09T21:35:15.393112
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/hero.html
+  event: pageview
+- ts: 2026-05-09T21:50:18.126697
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /
+  event: pageview
+- ts: 2026-05-09T21:50:18.417695
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/navbar.html
+  event: pageview
+- ts: 2026-05-09T21:50:18.444695
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/hero.html
+  event: pageview
+- ts: 2026-05-09T21:50:18.521696
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/logos.html
+  event: pageview
+- ts: 2026-05-09T21:50:18.617695
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/services.html
+  event: pageview
+- ts: 2026-05-09T21:50:18.710701
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/problems.html
+  event: pageview
+- ts: 2026-05-09T21:50:18.819696
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/methodology.html
+  event: pageview
+- ts: 2026-05-09T21:50:18.895694
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/metrics.html
+  event: pageview
+- ts: 2026-05-09T21:50:18.969699
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cta.html
+  event: pageview
+- ts: 2026-05-09T21:50:19.054693
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/footer.html
+  event: pageview
+- ts: 2026-05-09T21:50:19.136694
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cookie-consent.html
+  event: pageview
+- ts: 2026-05-09T21:50:39.461722
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /avaliacao.html
+  event: pageview
+- ts: 2026-05-09T21:55:04.256332
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /avaliacao.html
+  event: pageview
+- ts: 2026-05-09T21:55:33.040802
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: ""
+  path: /api/assessment
+  event: assessment_submit
+- ts: 2026-05-10T00:51:33.458085
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /
+  event: pageview
+- ts: 2026-05-10T00:51:33.794088
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/navbar.html
+  event: pageview
+- ts: 2026-05-10T00:51:33.816091
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/hero.html
+  event: pageview
+- ts: 2026-05-10T00:51:33.915093
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/logos.html
+  event: pageview
+- ts: 2026-05-10T00:51:34.047096
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/services.html
+  event: pageview
+- ts: 2026-05-10T00:51:34.132091
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/problems.html
+  event: pageview
+- ts: 2026-05-10T00:51:34.177094
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/methodology.html
+  event: pageview
+- ts: 2026-05-10T00:51:34.292090
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/metrics.html
+  event: pageview
+- ts: 2026-05-10T00:51:34.386091
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cta.html
+  event: pageview
+- ts: 2026-05-10T00:51:34.494090
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/footer.html
+  event: pageview
+- ts: 2026-05-10T00:51:34.567090
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cookie-consent.html
+  event: pageview
+- ts: 2026-05-10T00:52:34.580634
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /avaliacao.html
+  event: pageview
+- ts: 2026-05-10T00:57:26.909310
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /
+  event: pageview
+- ts: 2026-05-10T00:57:27.172292
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/navbar.html
+  event: pageview
+- ts: 2026-05-10T00:57:27.189294
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/hero.html
+  event: pageview
+- ts: 2026-05-10T00:57:27.286294
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/logos.html
+  event: pageview
+- ts: 2026-05-10T00:57:27.393297
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/services.html
+  event: pageview
+- ts: 2026-05-10T00:57:27.468311
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/problems.html
+  event: pageview
+- ts: 2026-05-10T00:57:27.509292
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/methodology.html
+  event: pageview
+- ts: 2026-05-10T00:57:27.552304
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/metrics.html
+  event: pageview
+- ts: 2026-05-10T00:57:27.642291
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cta.html
+  event: pageview
+- ts: 2026-05-10T00:57:27.714296
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/footer.html
+  event: pageview
+- ts: 2026-05-10T00:57:27.789291
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cookie-consent.html
+  event: pageview
+- ts: 2026-05-10T01:06:34.870342
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /avaliacao.html
+  event: pageview
+- ts: 2026-05-10T01:06:54.388663
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/navbar.html
+  event: pageview
+- ts: 2026-05-10T01:06:54.404666
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/hero.html
+  event: pageview
+- ts: 2026-05-10T01:06:54.535663
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/problems.html
+  event: pageview
+- ts: 2026-05-10T01:06:54.702668
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cta.html
+  event: pageview
+- ts: 2026-05-10T01:06:54.758668
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/footer.html
+  event: pageview
+- ts: 2026-05-10T13:20:04.744015
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /
+  event: pageview
+- ts: 2026-05-10T13:20:05.125784
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/navbar.html
+  event: pageview
+- ts: 2026-05-10T13:20:05.138789
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/hero.html
+  event: pageview
+- ts: 2026-05-10T13:20:05.200789
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/logos.html
+  event: pageview
+- ts: 2026-05-10T13:20:05.310789
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/services.html
+  event: pageview
+- ts: 2026-05-10T13:20:05.410792
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/modelos.html
+  event: pageview
+- ts: 2026-05-10T13:20:05.507792
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/problems.html
+  event: pageview
+- ts: 2026-05-10T13:20:05.587793
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/methodology.html
+  event: pageview
+- ts: 2026-05-10T13:20:05.656784
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/calculator.html
+  event: pageview
+- ts: 2026-05-10T13:20:05.723789
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/metrics.html
+  event: pageview
+- ts: 2026-05-10T13:20:05.806788
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cta.html
+  event: pageview
+- ts: 2026-05-10T13:20:05.881790
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/footer.html
+  event: pageview
+- ts: 2026-05-10T13:20:05.954784
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cookie-consent.html
+  event: pageview
+- ts: 2026-05-10T13:24:04.979119
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /
+  event: pageview
+- ts: 2026-05-10T13:24:05.359544
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/navbar.html
+  event: pageview
+- ts: 2026-05-10T13:24:32.845757
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /
+  event: pageview
+- ts: 2026-05-10T13:24:33.256320
+  vid: fd33ef36-47f8-4166-9dd4-5d24d507648d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/navbar.html
+  event: pageview
+- ts: 2026-05-10T17:12:23.342955
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /
+  event: pageview
+- ts: 2026-05-10T17:12:23.788022
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/navbar.html
+  event: pageview
+- ts: 2026-05-10T17:12:23.813597
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/hero.html
+  event: pageview
+- ts: 2026-05-10T17:12:23.914606
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/logos.html
+  event: pageview
+- ts: 2026-05-10T17:12:24.088595
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/services.html
+  event: pageview
+- ts: 2026-05-10T17:12:24.156600
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/modelos.html
+  event: pageview
+- ts: 2026-05-10T17:12:24.204597
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/problems.html
+  event: pageview
+- ts: 2026-05-10T17:12:24.243594
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/methodology.html
+  event: pageview
+- ts: 2026-05-10T17:12:24.287600
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/calculator.html
+  event: pageview
+- ts: 2026-05-10T17:12:24.433612
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/metrics.html
+  event: pageview
+- ts: 2026-05-10T17:12:24.516594
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cta.html
+  event: pageview
+- ts: 2026-05-10T17:12:24.610598
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/footer.html
+  event: pageview
+- ts: 2026-05-10T17:12:24.685595
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cookie-consent.html
+  event: pageview
+- ts: 2026-05-10T17:13:01.681692
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /avaliacao.html
+  event: pageview
+- ts: 2026-05-10T17:13:56.354806
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: ""
+  path: /api/assessment
+  event: assessment_submit
+- ts: 2026-05-10T17:14:17.100832
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /
+  event: pageview
+- ts: 2026-05-10T17:14:17.360832
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/navbar.html
+  event: pageview
+- ts: 2026-05-10T17:14:17.388839
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/hero.html
+  event: pageview
+- ts: 2026-05-10T17:14:17.452832
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/logos.html
+  event: pageview
+- ts: 2026-05-10T17:14:17.535834
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/services.html
+  event: pageview
+- ts: 2026-05-10T17:14:17.586840
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/modelos.html
+  event: pageview
+- ts: 2026-05-10T17:14:17.654831
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/problems.html
+  event: pageview
+- ts: 2026-05-10T17:14:17.731839
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/methodology.html
+  event: pageview
+- ts: 2026-05-10T17:14:17.801830
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/calculator.html
+  event: pageview
+- ts: 2026-05-10T17:14:17.863841
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/metrics.html
+  event: pageview
+- ts: 2026-05-10T17:14:17.927844
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cta.html
+  event: pageview
+- ts: 2026-05-10T17:14:17.991833
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/footer.html
+  event: pageview
+- ts: 2026-05-10T17:14:18.057831
+  vid: 5d33941d-525d-4e66-a264-4d3128dfeaed
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cookie-consent.html
+  event: pageview
+- ts: 2026-05-10T22:02:31.363164
+  vid: 7cfd46f7-530c-43d3-9ae9-be994ba7123d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /
+  event: pageview
+- ts: 2026-05-10T22:02:31.718475
+  vid: 7cfd46f7-530c-43d3-9ae9-be994ba7123d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/navbar.html
+  event: pageview
+- ts: 2026-05-10T22:02:31.736481
+  vid: 7cfd46f7-530c-43d3-9ae9-be994ba7123d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/hero.html
+  event: pageview
+- ts: 2026-05-10T22:02:31.835471
+  vid: 7cfd46f7-530c-43d3-9ae9-be994ba7123d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/logos.html
+  event: pageview
+- ts: 2026-05-10T22:02:31.982475
+  vid: 7cfd46f7-530c-43d3-9ae9-be994ba7123d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/services.html
+  event: pageview
+- ts: 2026-05-10T22:02:32.081473
+  vid: 7cfd46f7-530c-43d3-9ae9-be994ba7123d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/modelos.html
+  event: pageview
+- ts: 2026-05-10T22:02:32.122473
+  vid: 7cfd46f7-530c-43d3-9ae9-be994ba7123d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/problems.html
+  event: pageview
+- ts: 2026-05-10T22:02:32.169474
+  vid: 7cfd46f7-530c-43d3-9ae9-be994ba7123d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/methodology.html
+  event: pageview
+- ts: 2026-05-10T22:02:32.212474
+  vid: 7cfd46f7-530c-43d3-9ae9-be994ba7123d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/calculator.html
+  event: pageview
+- ts: 2026-05-10T22:02:32.251474
+  vid: 7cfd46f7-530c-43d3-9ae9-be994ba7123d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/metrics.html
+  event: pageview
+- ts: 2026-05-10T22:02:32.293472
+  vid: 7cfd46f7-530c-43d3-9ae9-be994ba7123d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cta.html
+  event: pageview
+- ts: 2026-05-10T22:02:32.493473
+  vid: 7cfd46f7-530c-43d3-9ae9-be994ba7123d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/footer.html
+  event: pageview
+- ts: 2026-05-10T22:02:32.591475
+  vid: 7cfd46f7-530c-43d3-9ae9-be994ba7123d
+  ip: 127.0.0.1
+  ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Sa"
+  path: /partials/cookie-consent.html
+  event: pageview

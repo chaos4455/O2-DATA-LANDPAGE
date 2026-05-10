@@ -1,0 +1,182 @@
+<!-- PARTIAL: cookie-consent.html — Banner LGPD + Modal de Termos -->
+
+<!-- ── Cookie Banner ─────────────────────────────────────────────────────── -->
+<div id="cookie-banner"
+     class="fixed bottom-0 left-0 right-0 z-[998] transform translate-y-full transition-transform duration-500 ease-out"
+     style="display:none">
+  <div class="bg-slate-900/98 backdrop-blur-xl border-t border-slate-700/50 shadow-2xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+
+        <!-- Icon + Text -->
+        <div class="flex items-start gap-3 flex-1">
+          <div class="w-9 h-9 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i class="fa-solid fa-cookie-bite text-blue-400 text-sm"></i>
+          </div>
+          <div>
+            <p class="text-white font-bold text-sm mb-0.5">Usamos cookies e coletamos dados de navegação</p>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Utilizamos cookies para melhorar sua experiência, analisar o tráfego e personalizar conteúdo.
+              Ao continuar navegando, você concorda com nossa
+              <button onclick="openTermsModal()" class="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors">Política de Privacidade</button>
+              e com o uso de cookies.
+            </p>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-2.5 flex-shrink-0 w-full sm:w-auto">
+          <button onclick="openTermsModal()"
+            class="flex-1 sm:flex-none px-4 py-2.5 rounded-xl border border-slate-600 text-slate-300 text-xs font-bold hover:bg-slate-800 transition-colors whitespace-nowrap">
+            Ver Termos
+          </button>
+          <button onclick="acceptCookies()"
+            class="flex-1 sm:flex-none px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold hover:from-blue-500 hover:to-purple-500 transition-all shadow-lg shadow-blue-500/20 whitespace-nowrap">
+            <i class="fa-solid fa-check mr-1.5"></i>Aceitar e Continuar
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Terms Modal ───────────────────────────────────────────────────────── -->
+<div id="terms-modal"
+     class="fixed inset-0 z-[999] flex items-end sm:items-center justify-center p-0 sm:p-4"
+     style="display:none">
+  <!-- Backdrop -->
+  <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeTermsModal()"></div>
+
+  <!-- Modal -->
+  <div class="relative w-full sm:max-w-2xl bg-slate-900 border border-slate-700/50 rounded-t-3xl sm:rounded-3xl shadow-2xl max-h-[90vh] flex flex-col z-10">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between p-6 border-b border-slate-800 flex-shrink-0">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-blue-500/20 flex items-center justify-center">
+          <i class="fa-solid fa-file-shield text-blue-400 text-sm"></i>
+        </div>
+        <div>
+          <h2 class="text-white font-bold text-base">Termos de Uso e Privacidade</h2>
+          <p class="text-slate-500 text-xs">O2 Data Solutions · Versão 1.0 · 2025</p>
+        </div>
+      </div>
+      <button onclick="closeTermsModal()"
+        class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 transition-colors">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+    </div>
+
+    <!-- Content -->
+    <div class="overflow-y-auto flex-1 p-6 space-y-5 text-sm text-slate-400 leading-relaxed">
+
+      <div>
+        <h3 class="text-white font-bold mb-2 flex items-center gap-2">
+          <i class="fa-solid fa-cookie-bite text-blue-400 text-xs"></i> Cookies que utilizamos
+        </h3>
+        <div class="space-y-2">
+          <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-800/50 border border-slate-700/50">
+            <i class="fa-solid fa-circle-check text-green-400 text-xs mt-0.5 flex-shrink-0"></i>
+            <div><strong class="text-white text-xs">o2_theme</strong> — Preferência de tema (claro/escuro). Duração: 365 dias.</div>
+          </div>
+          <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-800/50 border border-slate-700/50">
+            <i class="fa-solid fa-circle-check text-blue-400 text-xs mt-0.5 flex-shrink-0"></i>
+            <div><strong class="text-white text-xs">o2_vid</strong> — ID único de visitante para analytics. Duração: 365 dias.</div>
+          </div>
+          <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-800/50 border border-slate-700/50">
+            <i class="fa-solid fa-circle-check text-yellow-400 text-xs mt-0.5 flex-shrink-0"></i>
+            <div><strong class="text-white text-xs">o2_waf_pass</strong> — Verificação de segurança WAF. Duração: 24 horas.</div>
+          </div>
+          <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-800/50 border border-slate-700/50">
+            <i class="fa-solid fa-circle-check text-purple-400 text-xs mt-0.5 flex-shrink-0"></i>
+            <div><strong class="text-white text-xs">o2_consent</strong> — Registro do seu consentimento LGPD. Duração: 365 dias.</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-white font-bold mb-2 flex items-center gap-2">
+          <i class="fa-solid fa-database text-purple-400 text-xs"></i> Dados que coletamos
+        </h3>
+        <p>Coletamos dados de navegação como endereço IP, tipo de navegador, sistema operacional, páginas visitadas, tempo de permanência e origem do acesso. Esses dados são usados exclusivamente para melhorar nossos serviços e personalizar sua experiência.</p>
+      </div>
+
+      <div>
+        <h3 class="text-white font-bold mb-2 flex items-center gap-2">
+          <i class="fa-solid fa-envelope text-green-400 text-xs"></i> Consentimento de marketing
+        </h3>
+        <p>Ao preencher e enviar nosso formulário de contato, você autoriza a O2 Data Solutions a entrar em contato via <strong class="text-white">e-mail</strong> e <strong class="text-white">WhatsApp</strong> com informações sobre nossos serviços, conteúdos relevantes e propostas comerciais. Você pode cancelar a qualquer momento respondendo "SAIR" ou enviando e-mail para <a href="mailto:elias@o2data.com.br" class="text-blue-400 hover:underline">elias@o2data.com.br</a>.</p>
+      </div>
+
+      <div>
+        <h3 class="text-white font-bold mb-2 flex items-center gap-2">
+          <i class="fa-solid fa-shield-halved text-red-400 text-xs"></i> LGPD — Lei Geral de Proteção de Dados
+        </h3>
+        <p>Em conformidade com a Lei nº 13.709/2018 (LGPD), você tem direito a acessar, corrigir, excluir ou portar seus dados pessoais. Para exercer esses direitos, entre em contato com nosso DPO em <a href="mailto:elias@o2data.com.br" class="text-blue-400 hover:underline">elias@o2data.com.br</a>.</p>
+      </div>
+
+      <div>
+        <h3 class="text-white font-bold mb-2 flex items-center gap-2">
+          <i class="fa-solid fa-building text-slate-400 text-xs"></i> Responsável pelo tratamento
+        </h3>
+        <p><strong class="text-white">O2 Data Solutions</strong> · Maringá, Paraná — Brasil<br>
+        E-mail: <a href="mailto:elias@o2data.com.br" class="text-blue-400 hover:underline">elias@o2data.com.br</a><br>
+        WhatsApp: <a href="https://wa.me/5511913353137" class="text-green-400 hover:underline">+55 (11) 9 1335-3137</a></p>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="p-6 border-t border-slate-800 flex-shrink-0">
+      <button onclick="acceptCookies(); closeTermsModal()"
+        class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-sm hover:from-blue-500 hover:to-purple-500 transition-all shadow-lg shadow-blue-500/20">
+        <i class="fa-solid fa-check mr-2"></i>Entendi e Aceito os Termos
+      </button>
+      <p class="text-center text-slate-600 text-xs mt-3">
+        Ao aceitar, você concorda com o uso de cookies e coleta de dados conforme descrito acima.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ── Cookie Consent Logic ──────────────────────────────────────────────────────
+(function initConsent() {
+  function gc(n) { var m = document.cookie.match('(^| )' + n + '=([^;]+)'); return m ? m[2] : null; }
+  if (!gc('o2_consent')) {
+    setTimeout(() => {
+      const b = document.getElementById('cookie-banner');
+      if (b) { b.style.display = 'block'; setTimeout(() => b.classList.remove('translate-y-full'), 50); }
+    }, 2000);
+  }
+})();
+
+function acceptCookies() {
+  const exp = new Date(Date.now() + 365*864e5).toUTCString();
+  document.cookie = 'o2_consent=1;expires=' + exp + ';path=/;SameSite=Lax';
+  document.cookie = 'o2_marketing=1;expires=' + exp + ';path=/;SameSite=Lax';
+  const b = document.getElementById('cookie-banner');
+  if (b) { b.classList.add('translate-y-full'); setTimeout(() => b.style.display = 'none', 500); }
+  // Send consent event
+  fetch('/api/event', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({event:'consent_accept', data:{marketing:true}})
+  }).catch(() => {});
+}
+
+function openTermsModal() {
+  const m = document.getElementById('terms-modal');
+  if (m) { m.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+}
+
+function closeTermsModal() {
+  const m = document.getElementById('terms-modal');
+  if (m) { m.style.display = 'none'; document.body.style.overflow = ''; }
+}
+
+// Close modal on Escape
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeTermsModal(); });
+</script>

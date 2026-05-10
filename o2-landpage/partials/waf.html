@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificação de Segurança — O2 Data Solutions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .mesh-bg {
+      background-color: #050a18;
+      background-image:
+        radial-gradient(at 20% 30%, hsla(228,100%,62%,0.2) 0px, transparent 55%),
+        radial-gradient(at 80% 10%, hsla(270,100%,62%,0.15) 0px, transparent 50%);
+    }
+    @keyframes spin-slow { to { transform: rotate(360deg); } }
+    .spin-slow { animation: spin-slow 3s linear infinite; }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.8); opacity: 1; }
+      100% { transform: scale(2); opacity: 0; }
+    }
+    .pulse-ring { animation: pulse-ring 2s ease-out infinite; }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+    .fade-in { animation: fadeIn 0.6s ease-out forwards; }
+    .fade-in-delay { animation: fadeIn 0.6s ease-out 0.3s forwards; opacity: 0; }
+  </style>
+</head>
+<body class="mesh-bg min-h-screen flex items-center justify-center p-4">
+
+  <div class="max-w-md w-full fade-in">
+
+    <!-- Shield icon with pulse -->
+    <div class="flex justify-center mb-8">
+      <div class="relative">
+        <div class="absolute inset-0 rounded-full bg-blue-500/20 pulse-ring"></div>
+        <div class="w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 to-purple-700 flex items-center justify-center shadow-2xl shadow-blue-500/30 relative z-10">
+          <i class="fa-solid fa-shield-halved text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card -->
+    <div class="bg-white/8 backdrop-blur-xl border border-white/12 rounded-3xl p-8 text-center shadow-2xl">
+
+      <!-- Logo -->
+      <div class="flex items-center justify-center gap-2.5 mb-6">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+          <i class="fa-solid fa-circle-nodes text-white text-sm"></i>
+        </div>
+        <span class="font-extrabold text-white text-lg">O2 Data<span class="text-blue-400">.</span></span>
+      </div>
+
+      <h1 class="text-2xl font-extrabold text-white mb-3">Verificação de Segurança</h1>
+      <p class="text-slate-400 text-sm mb-8 leading-relaxed">
+        Para proteger nossos sistemas e garantir a melhor experiência,
+        precisamos verificar que você é humano antes de continuar.
+      </p>
+
+      <!-- Challenge box -->
+      <div id="challenge-box" class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-6">
+        <div id="challenge-loading" class="flex flex-col items-center gap-3">
+          <i class="fa-solid fa-circle-notch spin-slow text-blue-400 text-2xl"></i>
+          <p class="text-slate-400 text-sm">Verificando seu navegador...</p>
+        </div>
+        <div id="challenge-ready" class="hidden">
+          <div class="flex items-center gap-3 p-4 bg-white/5 rounded-xl border border-white/10 cursor-pointer hover:bg-white/10 transition-colors" id="human-check" onclick="completeChallenge()">
+            <div id="check-box" class="w-6 h-6 rounded border-2 border-slate-500 flex items-center justify-center flex-shrink-0 transition-all">
+            </div>
+            <span class="text-white text-sm font-medium">Não sou um robô</span>
+            <div class="ml-auto">
+              <i class="fa-solid fa-shield-halved text-blue-400 text-lg"></i>
+            </div>
+          </div>
+        </div>
+        <div id="challenge-success" class="hidden flex-col items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+            <i class="fa-solid fa-check text-green-400 text-xl"></i>
+          </div>
+          <p class="text-green-400 font-bold text-sm">Verificação concluída!</p>
+          <p class="text-slate-400 text-xs">Redirecionando...</p>
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="flex items-center justify-center gap-4 text-xs text-slate-500">
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-lock text-slate-600"></i>Conexão segura</span>
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-eye-slash text-slate-600"></i>Privacidade protegida</span>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <p class="text-center text-slate-600 text-xs mt-6">
+      &copy; 2025 O2 Data Solutions · Maringá, PR
+    </p>
+
+  </div>
+
+  <script>
+    // Simulate browser fingerprint check
+    setTimeout(() => {
+      document.getElementById('challenge-loading').classList.add('hidden');
+      document.getElementById('challenge-ready').classList.remove('hidden');
+    }, 1800);
+
+    function completeChallenge() {
+      const box = document.getElementById('check-box');
+      box.innerHTML = '<i class="fa-solid fa-check text-green-400 text-xs"></i>';
+      box.classList.add('border-green-500', 'bg-green-500/20');
+
+      // Collect browser fingerprint data
+      const fp = {
+        ua: navigator.userAgent,
+        lang: navigator.language,
+        tz: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        screen: screen.width + 'x' + screen.height,
+        cores: navigator.hardwareConcurrency || 0,
+        mem: navigator.deviceMemory || 0,
+        platform: navigator.platform,
+        ts: new Date().toISOString(),
+      };
+
+      // Set WAF pass cookie (24h)
+      const exp = new Date(Date.now() + 24*60*60*1000).toUTCString();
+      document.cookie = 'o2_waf_pass=1;expires=' + exp + ';path=/;SameSite=Lax';
+      document.cookie = 'o2_fp=' + btoa(JSON.stringify(fp)).substring(0,100) + ';expires=' + exp + ';path=/;SameSite=Lax';
+
+      // Send event
+      fetch('/api/event', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({event:'waf_pass', data: fp})
+      }).catch(() => {});
+
+      setTimeout(() => {
+        document.getElementById('challenge-ready').classList.add('hidden');
+        const s = document.getElementById('challenge-success');
+        s.classList.remove('hidden');
+        s.classList.add('flex');
+      }, 400);
+
+      setTimeout(() => {
+        const redir = new URLSearchParams(window.location.search).get('next') || '/';
+        window.location.href = redir;
+      }, 1800);
+    }
+  </script>
+</body>
+</html>
