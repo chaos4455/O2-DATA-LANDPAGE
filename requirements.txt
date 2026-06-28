@@ -1,0 +1,27 @@
+# O2 Data Solutions — o2-landpage
+# Gerado automaticamente com base nas dependências do projeto
+# Versões instaladas no ambiente de desenvolvimento (Python 3.11)
+
+# ── Web framework ─────────────────────────────────────────────────────────────
+fastapi==0.109.0
+uvicorn==0.27.0
+
+# ── Data / ML ─────────────────────────────────────────────────────────────────
+pandas==2.3.3
+numpy==1.26.4
+
+# ── Config ────────────────────────────────────────────────────────────────────
+PyYAML==6.0.1
+
+# ── Validation ────────────────────────────────────────────────────────────────
+pydantic==2.5.3
+
+# ── Console / UI ──────────────────────────────────────────────────────────────
+colorama==0.4.6
+rich==13.7.1
+
+# ── File watching (hot reload) ────────────────────────────────────────────────
+watchdog==4.0.1
+
+# ── Async file I/O ────────────────────────────────────────────────────────────
+aiofiles==23.2.1
